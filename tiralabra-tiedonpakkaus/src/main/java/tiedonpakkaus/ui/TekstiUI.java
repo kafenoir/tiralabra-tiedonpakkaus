@@ -4,6 +4,10 @@ package tiedonpakkaus.ui;
 import java.util.*;
 import tiedonpakkaus.domain.TPPalvelu;
 
+/**
+ * Tilapäinen tekstikäyttöliittymä.
+ */
+
 public class TekstiUI {
     
     

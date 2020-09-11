@@ -1,6 +1,11 @@
 
 package tiedonpakkaus.domain;
 
+/**
+ * Huffmanin puumallissa tarvittava solmua kuvaava luokka.
+ * Todennäköisesti toteutan vielä yleisemmän Solmu-luokan, jonka muut erikoistuneemmat perivät.
+ */
+
 public class Solmu implements Comparable<Solmu> {
     
     String merkki;
