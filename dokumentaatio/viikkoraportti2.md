@@ -2,7 +2,7 @@
 
 ## Mitä tein tällä viikolla?
 
-Perehdyin paremmin Huffmanin algoritmiin ja aloitin varsinaisen ohjelmointityön. Toteutin Huffmanin koodauksen käyttäjän antamalle syötteelle, siten että algoritmi muodostaa merkkijonosta bittiesityksen perustuen merkkien frekvensseihin. Ohjelma myös kääntäää bittiesityksen takaisin alkuperäiseksi merkkijonoesitykseksi. Luonnollisesti pakkaaminen ja purkaminen tapahtuvat lopullisessa ohjelmassa erikseen käyttäjän aloitteesta. Tämänhetkinen toteutus lähinnä osoittaa, että algoritmi toimii kuten pitääkin. Ohjelman keskeiset luokat ja metodit on myös kommentoitu javadocia varten.
+Perehdyin paremmin Huffmanin algoritmiin ja aloitin varsinaisen ohjelmointityön. Toteutin Huffmanin koodauksen käyttäjän antamalle syötteelle siten, että algoritmi muodostaa merkkijonosta bittiesityksen perustuen merkkien frekvensseihin syötteessä. Ohjelma myös kääntäää bittiesityksen takaisin alkuperäiseksi merkkijonoesitykseksi. Luonnollisesti pakkaaminen ja purkaminen tapahtuvat lopullisessa ohjelmassa erikseen käyttäjän aloitteesta. Tämänhetkinen toteutus lähinnä osoittaa, että algoritmi toimii kuten pitääkin. Ohjelman keskeiset luokat ja metodit on myös kommentoitu javadocia varten.
 
 Tietorakenteina on käytetty tilapäisesti javan omia toteutuksia.
 
