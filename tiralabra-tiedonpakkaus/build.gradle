@@ -3,7 +3,7 @@ apply plugin: 'jacoco'
 apply plugin: 'application'
 
 
-mainClassName = 'tiralabra.tiedonpakkaus.Main'
+mainClassName = 'tiedonpakkaus.Main'
 
 repositories {
     jcenter()
@@ -15,9 +15,13 @@ dependencies {
 
 jacocoTestReport {
     reports {
-        xml.enables = true
+        xml.enabled = true
         html.enabled = true
     }
+}
+
+run{
+    standardInput = System.in
 }
 
 check.dependsOn jacocoTestReport
