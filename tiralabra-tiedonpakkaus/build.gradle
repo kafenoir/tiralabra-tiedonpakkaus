@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'application'
+apply plugin: 'checkstyle'
 
 
 mainClassName = 'tiedonpakkaus.Main'
@@ -27,6 +28,10 @@ task myJavadocs(type: Javadoc) {
 
 run{
     standardInput = System.in
+}
+
+checkstyleMain {
+    source = 'src/main/java'
 }
 
 check.dependsOn jacocoTestReport

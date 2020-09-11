@@ -6,7 +6,6 @@ import java.util.PriorityQueue;
 /**
  * Huffmanin koodaukseen liittyvät toiminnot.
  */
-
 public class Huffman {
 
     HashMap<String, Integer> frekvenssit;
@@ -23,11 +22,12 @@ public class Huffman {
         n = 0;
         kooditaulu = new HashMap<>();
     }
-/**
- * Laskee syötteen merkkien frekvenssit ja tallettaa ne hajautustauluun.
- * 
- * @param syote käyttäjän antama merkkijono
- */
+
+    /**
+     * Laskee syötteen merkkien frekvenssit ja tallettaa ne hajautustauluun.
+     *
+     * @param syote käyttäjän antama merkkijono
+     */
     public void laskeFrekvenssit(String syote) {
 
         this.syote = syote;
@@ -48,8 +48,8 @@ public class Huffman {
 
     /**
      * Palauttaa merkkijonon, jossa merkit ja niiden frekvenssit.
-     * 
-     * @return 
+     *
+     * @return
      */
     public String tulostaFrekvenssit() {
 
@@ -63,12 +63,11 @@ public class Huffman {
 
         return frekvenssiTuloste;
     }
-    
-    /**
-     * Luo Solmu-olioita merkeistä ja niiden frekvensseistä. 
-     * Lisää luodut Solmu-oliot minimikekoon.
-     */
 
+    /**
+     * Luo Solmu-olioita merkeistä ja niiden frekvensseistä. Lisää luodut
+     * Solmu-oliot minimikekoon.
+     */
     public void rakennaKeko() {
 
         for (String kirjain : frekvenssit.keySet()) {
@@ -78,24 +77,23 @@ public class Huffman {
             minimikeko.add(solmu);
         }
     }
-    
+
     /**
-     * Huffmanin puun muodostaminen.
-     * Alussa minimikeossa ovat vain merkkejä ja niiden frekvenssejä kuvaavat solmut.
-     * Tehdään n - 1 kierrosta, joissa luodaan aina uusi solmu 
-     * ja haetaan minimikeosta kaksi pienimmän frekvenssiarvon
-     * omaavaa puuta, jotka asetetaan luodun solmun lapsiksi. 
-     * Uuden solmun frekvenssiarvoksi tulee sen lasten frekvenssiarvojen summa. 
-     * Yhdistetty puu lisätään takaisin kekoon. Kun kierrokset on suoritettu, 
+     * Huffmanin puun muodostaminen. Alussa minimikeossa ovat vain merkkejä ja
+     * niiden frekvenssejä kuvaavat solmut. Tehdään n - 1 kierrosta, joissa
+     * luodaan aina uusi solmu ja haetaan minimikeosta kaksi pienimmän
+     * frekvenssiarvon omaavaa puuta, jotka asetetaan luodun solmun lapsiksi.
+     * Uuden solmun frekvenssiarvoksi tulee sen lasten frekvenssiarvojen summa.
+     * Yhdistetty puu lisätään takaisin kekoon. Kun kierrokset on suoritettu,
      * jäljellä on yksi yhtenäinen puu.
-     * 
+     *
      * Puun luonnin jälkeen kutsutaan metodeita luoKooditaulu ja koodaaSyote ja
      * palautetaan jälkimmäisestä saatu merkkijono TPPalvelulle.
-     * 
-     * Lopuksi kutsutaan metodia koodaaSyote, 
-     * @return 
+     *
+     * Lopuksi kutsutaan metodia koodaaSyote,
+     *
+     * @return
      */
-
     public String huffmanPakkaa() {
 
         for (int i = 1; i < n; i++) {
@@ -115,15 +113,15 @@ public class Huffman {
         String huffmannKoodi = koodaaSyote();
         return huffmannKoodi;
     }
-    
-    /**
-     * Muodostaa merkkien bittiesitykset Huffmanin puuta seuraamalla 
-     * ja tallettaa ne hajautustauluun.
-     * 
-     * @param solmu seuraavaksi käsiteltävä solmu
-     * @param koodi bittiesitys reitistä, jota juuresta seuraamalla päästään käsiteltävään solmuun
-     */
 
+    /**
+     * Muodostaa merkkien bittiesitykset Huffmanin puuta seuraamalla ja
+     * tallettaa ne hajautustauluun.
+     *
+     * @param solmu seuraavaksi käsiteltävä solmu
+     * @param koodi bittiesitys reitistä, jota juuresta seuraamalla päästään
+     * käsiteltävään solmuun
+     */
     public void luoKooditaulu(Solmu solmu, String koodi) {
 
         if (solmu.vasen == null && solmu.oikea == null) {
@@ -135,14 +133,13 @@ public class Huffman {
             luoKooditaulu(solmu.oikea, koodi + '1');
         }
     }
-    
+
     /**
      * Palauttaa käyttäjän syötteen bittiesityksen hakemalla merkkejä vastaavat
      * bittijonot hajautustaulusta
-     * 
+     *
      * @return palauttaa käyttäjän syötettä vastaavan bittiesityksen
      */
-
     public String koodaaSyote() {
 
         StringBuilder rakentaja = new StringBuilder();
@@ -156,16 +153,15 @@ public class Huffman {
         return rakentaja.toString();
 
     }
-    
+
     /**
-     * Muuttaa bittiesityksen takaisin alkuperäiseksi merkkijonoksi.
-     * Seurataan bittiesityksen osoittamaa reittiä Huffmanin puun juuresta 
-     * ja aina lehteen päädyttäessä lisätään merkkijonoon lehden osoittama merkki.
-     * 
+     * Muuttaa bittiesityksen takaisin alkuperäiseksi merkkijonoksi. Seurataan
+     * bittiesityksen osoittamaa reittiä Huffmanin puun juuresta ja aina lehteen
+     * päädyttäessä lisätään merkkijonoon lehden osoittama merkki.
+     *
      * @param koodi alkuperäisen merkkijonon bittiesitys
      * @return alkuperäinen merkkijono
      */
-
     public String huffmanPura(String koodi) {
 
         StringBuilder rakentaja = new StringBuilder();
@@ -174,7 +170,7 @@ public class Huffman {
         int i = 0;
 
         while (i < koodi.length()) {
-            
+
             if (solmu.vasen == null && solmu.oikea == null) {
 
                 rakentaja.append(solmu.merkki);
@@ -189,10 +185,10 @@ public class Huffman {
                 if (koodi.charAt(i) == '1') {
                     solmu = solmu.oikea;
                 }
-                
+
                 i++;
             }
-            
+
         }
         rakentaja.append(solmu.merkki);
 
