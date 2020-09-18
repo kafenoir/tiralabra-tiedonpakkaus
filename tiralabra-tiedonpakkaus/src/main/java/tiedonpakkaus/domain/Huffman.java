@@ -2,6 +2,8 @@ package tiedonpakkaus.domain;
 
 import java.util.HashMap;
 import java.util.PriorityQueue;
+import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * Huffmanin koodaukseen liittyvät toiminnot.
@@ -13,6 +15,8 @@ public class Huffman {
     PriorityQueue<Solmu> minimikeko;
     int n;
     String syote;
+    ArrayList<String> aineisto;
+    ArrayList<String> koodilista;
     Solmu juuri;
 
     public Huffman() {
@@ -21,6 +25,7 @@ public class Huffman {
         minimikeko = new PriorityQueue<>();
         n = 0;
         kooditaulu = new HashMap<>();
+
     }
 
     /**
@@ -38,32 +43,41 @@ public class Huffman {
 
             if (!frekvenssit.containsKey(s)) {
                 frekvenssit.put(s, 1);
-                n++;
             } else {
                 int frekvenssi = frekvenssit.get(s);
                 frekvenssit.put(s, frekvenssi + 1);
             }
         }
     }
+    
+    public void asetaFrekvenssit(HashMap<String, Integer> sanakirja) {
+        
+        this.frekvenssit = sanakirja;
+    }
+
+    public void asetaAineisto(ArrayList<String> aineisto) {
+
+        this.aineisto = aineisto;
+    }
 
     /**
-     * Palauttaa merkkijonon, jossa merkit ja niiden frekvenssit.
+     * Palauttaa merkkijonon, jossa merkit ja niiden frekvenssit. Testikäyttöön,
+     * ei lopullisessa versiossa.
      *
      * @return
      */
-    public String tulostaFrekvenssit() {
-
-        StringBuilder rakentaja = new StringBuilder();
-
-        for (String kirjain : frekvenssit.keySet()) {
-            rakentaja.append(kirjain + ": " + frekvenssit.get(kirjain) + "\n");
-        }
-
-        String frekvenssiTuloste = rakentaja.toString();
-
-        return frekvenssiTuloste;
-    }
-
+//    public String tulostaFrekvenssit() {
+//
+//        StringBuilder rakentaja = new StringBuilder();
+//
+//        for (String kirjain : frekvenssit.keySet()) {
+//            rakentaja.append(kirjain + ": " + frekvenssit.get(kirjain) + "\n");
+//        }
+//
+//        String frekvenssiTuloste = rakentaja.toString();
+//
+//        return frekvenssiTuloste;
+//    }
     /**
      * Luo Solmu-olioita merkeistä ja niiden frekvensseistä. Lisää luodut
      * Solmu-oliot minimikekoon.
@@ -76,6 +90,7 @@ public class Huffman {
             solmu.setFrekvenssi(frekvenssit.get(kirjain));
             minimikeko.add(solmu);
         }
+
     }
 
     /**
@@ -94,7 +109,9 @@ public class Huffman {
      *
      * @return
      */
-    public String huffmanPakkaa() {
+    public String huffmanPakkaa(int moodi) {
+        
+        n = frekvenssit.size();
 
         for (int i = 1; i < n; i++) {
             Solmu solmu = new Solmu();
@@ -110,8 +127,16 @@ public class Huffman {
         String koodi = "";
         juuri = minimikeko.poll();
         luoKooditaulu(juuri, koodi);
-        String huffmannKoodi = koodaaSyote();
-        return huffmannKoodi;
+
+        String huffmanKoodi = "";
+        if (moodi == 1) {
+            huffmanKoodi = koodaaMerkkijono();
+        } else {
+
+            koodilista = koodaaLista();
+        }
+
+        return huffmanKoodi;
     }
 
     /**
@@ -140,7 +165,7 @@ public class Huffman {
      *
      * @return palauttaa käyttäjän syötettä vastaavan bittiesityksen
      */
-    public String koodaaSyote() {
+    public String koodaaMerkkijono() {
 
         StringBuilder rakentaja = new StringBuilder();
 
@@ -154,6 +179,26 @@ public class Huffman {
 
     }
 
+    public ArrayList<String> koodaaLista() {
+        
+        System.out.println(kooditaulu.get("and"));
+
+        ArrayList<String> koodi = new ArrayList<>();
+
+        for (String sana : aineisto) {
+            if (kooditaulu.containsKey(sana)) {
+                koodi.add(kooditaulu.get(sana));
+            } else {
+                koodi.add(sana);
+            }
+        }
+        
+        System.out.println(koodi);
+
+        return koodi;
+
+    }
+
     /**
      * Muuttaa bittiesityksen takaisin alkuperäiseksi merkkijonoksi. Seurataan
      * bittiesityksen osoittamaa reittiä Huffmanin puun juuresta ja aina lehteen
@@ -163,35 +208,24 @@ public class Huffman {
      * @return alkuperäinen merkkijono
      */
     public String huffmanPura(String koodi) {
-
         StringBuilder rakentaja = new StringBuilder();
-
         Solmu solmu = juuri;
         int i = 0;
-
         while (i < koodi.length()) {
-
             if (solmu.vasen == null && solmu.oikea == null) {
-
                 rakentaja.append(solmu.merkki);
                 solmu = juuri;
-
             } else {
-
                 if (koodi.charAt(i) == '0') {
                     solmu = solmu.vasen;
-
                 }
                 if (koodi.charAt(i) == '1') {
                     solmu = solmu.oikea;
                 }
-
                 i++;
             }
-
         }
         rakentaja.append(solmu.merkki);
-
         return rakentaja.toString();
     }
 }

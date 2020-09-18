@@ -43,5 +43,15 @@ public class Solmu implements Comparable<Solmu> {
 
         return this.frekvenssi - solmu2.frekvenssi;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Solmu)) {
+            return false;
+        }
+        
+        Solmu toinen = (Solmu) obj;
+        return frekvenssi == toinen.frekvenssi && merkki.equals(toinen.merkki);
+    }
 
 }
