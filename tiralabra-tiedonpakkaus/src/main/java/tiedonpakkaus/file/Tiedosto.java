@@ -9,7 +9,6 @@ import java.util.HashMap;
 public class Tiedosto {
     
     private ArrayList<String> aineisto;
-    private HashMap<String, Integer> sanakirja;
     
     public Tiedosto(String tiedosto) throws Exception {
         
@@ -37,30 +36,6 @@ public class Tiedosto {
         return this.aineisto;
     }
     
-    public void lueSanakirjaTiedostosta(String tiedosto) throws Exception {
-        
-        sanakirja = new HashMap<>();
-        
-        try {
-            Scanner lukija = new Scanner(new File(tiedosto));
-
-            while (lukija.hasNextLine()) {
-                
-                String[] osat = lukija.nextLine().split(";");
-                
-                sanakirja.put(osat[2], Integer.valueOf(osat[3]));
-            }
-            
-        } catch (Exception e) {
-            FileWriter writer = new FileWriter(new File(tiedosto));
-            writer.close();
-        }
-    }
-    
-    public HashMap<String, Integer> getSanakirja() {
-        return this.sanakirja;
-    }
-        
     public void tallennaKoodiTiedostoon(ArrayList<String> koodi) throws Exception {
         
         try (FileWriter kirjoittaja = new FileWriter(new File("testipakkaus.txt"))) {

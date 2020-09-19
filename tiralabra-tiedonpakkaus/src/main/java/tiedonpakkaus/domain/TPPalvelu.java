@@ -2,6 +2,7 @@ package tiedonpakkaus.domain;
 
 import java.util.*;
 import tiedonpakkaus.file.Tiedosto;
+import tiedonpakkaus.file.TiedostoSanakirja;
 
 /**
  * Sovelluslogiikasta vastaava luokka.
@@ -54,11 +55,11 @@ public class TPPalvelu {
         HashMap<String, Integer> sanakirja = luoSanakirjaTiedostosta("sanakirja.txt");
         
          
-//        huffman.asetaFrekvenssit(sanakirja);
-//        huffman.rakennaKeko();
-//        huffman.asetaAineisto(aineisto);
-//        huffman.huffmanPakkaa(2);
-//        boolean onnistui = luoPakattuTiedosto(huffman.koodilista);
+        huffman.asetaFrekvenssit(sanakirja);
+        huffman.rakennaKeko();
+        huffman.asetaAineisto(aineisto);
+        huffman.huffmanPakkaa(2);
+        boolean onnistui = luoPakattuTiedosto(huffman.koodilista);
     }
 
     public ArrayList<String> luoAineistoTiedostosta(String nimi) {
@@ -82,8 +83,8 @@ public class TPPalvelu {
         
 
         try {
-            Tiedosto tiedosto = new Tiedosto(nimi);
-            sanakirja = tiedosto.getSanakirja();
+            TiedostoSanakirja sanak = new TiedostoSanakirja(nimi);
+            sanakirja = sanak.getSanakirja();
 
         } catch (Exception ex) {
         }

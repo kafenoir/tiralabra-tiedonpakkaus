@@ -192,8 +192,6 @@ public class Huffman {
                 koodi.add(sana);
             }
         }
-        
-        System.out.println(koodi);
 
         return koodi;
 
