@@ -4,14 +4,14 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class HuffmanTest {
+public class HuffmanDemoTest {
 
-    Huffman huffman;
+    HuffmanDemo huffman;
 
     @Before
     public void setUp() {
 
-        this.huffman = new Huffman();
+        this.huffman = new HuffmanDemo();
 
     }
 
@@ -43,14 +43,14 @@ public class HuffmanTest {
         huffman.laskeFrekvenssit("ccaab abab");
         huffman.rakennaKeko();
 
-        Solmu valiSolmu = huffman.minimikeko.poll();
-        Solmu cSolmu = huffman.minimikeko.poll();
+        SolmuDemo valiSolmu = huffman.minimikeko.poll();
+        SolmuDemo cSolmu = huffman.minimikeko.poll();
 
-        Solmu valiSolmuVertaa = new Solmu();
+        SolmuDemo valiSolmuVertaa = new SolmuDemo();
         valiSolmuVertaa.setFrekvenssi(1);
         valiSolmuVertaa.setMerkki(" ");
 
-        Solmu cSolmuVertaa = new Solmu();
+        SolmuDemo cSolmuVertaa = new SolmuDemo();
         cSolmuVertaa.setFrekvenssi(2);
         cSolmuVertaa.setMerkki("c");
 
@@ -102,13 +102,13 @@ public class HuffmanTest {
         
         String syote = "00011";
         
-        Solmu juuriSolmu = new Solmu();
-        Solmu frekvenssiSolmu = new Solmu();
-        Solmu aSolmu = new Solmu();
+        SolmuDemo juuriSolmu = new SolmuDemo();
+        SolmuDemo frekvenssiSolmu = new SolmuDemo();
+        SolmuDemo aSolmu = new SolmuDemo();
         aSolmu.setMerkki("a");
-        Solmu bSolmu = new Solmu();
+        SolmuDemo bSolmu = new SolmuDemo();
         bSolmu.setMerkki("b");
-        Solmu cSolmu = new Solmu();
+        SolmuDemo cSolmu = new SolmuDemo();
         cSolmu.setMerkki("c");
         
         juuriSolmu.setVasen(frekvenssiSolmu);

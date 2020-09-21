@@ -1,4 +1,5 @@
-package tiedonpakkaus.domain;
+
+package tiedonpakkaus.tietorakenteet;
 
 /**
  * Huffmanin puumallissa tarvittava solmua kuvaava luokka. Todennäköisesti
@@ -6,7 +7,7 @@ package tiedonpakkaus.domain;
  */
 public class Solmu implements Comparable<Solmu> {
 
-    String merkki;
+    byte merkki;
     String koodi;
     int frekvenssi;
     Solmu vasen;
@@ -20,7 +21,7 @@ public class Solmu implements Comparable<Solmu> {
         this.frekvenssi = frekvenssi;
     }
 
-    public void setMerkki(String merkki) {
+    public void setMerkki(byte merkki) {
         this.merkki = merkki;
     }
 
@@ -33,9 +34,21 @@ public class Solmu implements Comparable<Solmu> {
         this.oikea = oikea;
 
     }
+    
+    public Solmu getVasen() {
+        return this.vasen;
+    }
+    
+    public Solmu getOikea() {
+        return this.oikea;
+    }
 
     public int getFrekvenssi() {
         return this.frekvenssi;
+    }
+    
+    public byte getMerkki() {
+        return this.merkki;
     }
 
     @Override
@@ -51,7 +64,7 @@ public class Solmu implements Comparable<Solmu> {
         }
         
         Solmu toinen = (Solmu) obj;
-        return frekvenssi == toinen.frekvenssi && merkki.equals(toinen.merkki);
+        return frekvenssi == toinen.frekvenssi && merkki == toinen.merkki;
     }
 
 }

@@ -26,7 +26,7 @@ public class TekstiUI {
         } else if (syote.equals("t")) {
             System.out.println("Anna tiedostonimi: ");
             String tiedosto = lukija.nextLine();
-            palvelu.suoritaHuffmanTiedostolle(tiedosto);
+            palvelu.lueTiedosto(tiedosto);
         } else {
             System.out.println("Syöte ei kelpaa. Ohjelma lopetetaan.");
             System.exit(0);

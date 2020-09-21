@@ -1,20 +1,23 @@
 package tiedonpakkaus.domain;
 
 import java.util.*;
-import tiedonpakkaus.file.Tiedosto;
 import tiedonpakkaus.file.TiedostoSanakirja;
+import tiedonpakkaus.file.TiedostonLuku;
 
 /**
  * Sovelluslogiikasta vastaava luokka.
  */
 public class TPPalvelu {
 
+    HuffmanDemo huffmanDemo;
     Huffman huffman;
-    Tiedosto tiedosto;
+    TiedostonLuku tiedostonLuku;
 
     public TPPalvelu() {
 
         huffman = new Huffman();
+        huffmanDemo = new HuffmanDemo();
+        tiedostonLuku = new TiedostonLuku();
 
     }
 
@@ -27,11 +30,11 @@ public class TPPalvelu {
      */
     public String suoritaHuffmanMerkkijonolle(String syote) {
 
-        huffman.laskeFrekvenssit(syote);
-        huffman.rakennaKeko();
-        String koodi = huffman.huffmanPakkaa(1);
+        huffmanDemo.laskeFrekvenssit(syote);
+        huffmanDemo.rakennaKeko();
+        String koodi = huffmanDemo.huffmanPakkaa();
         System.out.println(koodi);
-        String purku = huffman.huffmanPura(koodi);
+        String purku = huffmanDemo.huffmanPura(koodi);
         System.out.println(purku);
 
         return koodi;
@@ -51,30 +54,10 @@ public class TPPalvelu {
 //    }
     public void suoritaHuffmanTiedostolle(String nimi) {
 
-        ArrayList<String> aineisto = luoAineistoTiedostosta(nimi); 
-        HashMap<String, Integer> sanakirja = luoSanakirjaTiedostosta("sanakirja.txt");
+        byte[] tavut = tiedostonLuku.lueTiedosto(nimi);
+        huffman.suoritaHuffman(tavut);
         
-         
-        huffman.asetaFrekvenssit(sanakirja);
-        huffman.rakennaKeko();
-        huffman.asetaAineisto(aineisto);
-        huffman.huffmanPakkaa(2);
-        boolean onnistui = luoPakattuTiedosto(huffman.koodilista);
-    }
-
-    public ArrayList<String> luoAineistoTiedostosta(String nimi) {
-
-        ArrayList<String> aineisto = new ArrayList<>();
-
-        try {
-            tiedosto = new Tiedosto(nimi);
-            aineisto = tiedosto.getAineisto();
-
-        } catch (Exception ex) {
-        }
-
-        return aineisto;
-
+            
     }
 
     public HashMap<String, Integer> luoSanakirjaTiedostosta(String nimi) {
@@ -92,18 +75,16 @@ public class TPPalvelu {
         return sanakirja;
 
     }
-
-    public boolean luoPakattuTiedosto(ArrayList<String> koodi) {
-
-        boolean onnistui = false;
-
-        try {
-            tiedosto.tallennaKoodiTiedostoon(koodi);
-            onnistui = true;
-
-        } catch (Exception ex) {
+    
+    public byte[] lueTiedosto(String nimi) {
+        
+        byte[] tavut = tiedostonLuku.lueTiedosto(nimi);
+        
+        for (byte tavu : tavut) {
+            System.out.println(tavu);
         }
-
-        return onnistui;
+        
+        return tavut;
+        
     }
 }
