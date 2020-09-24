@@ -12,8 +12,11 @@ public class Solmu implements Comparable<Solmu> {
     int frekvenssi;
     Solmu vasen;
     Solmu oikea;
+    boolean pseudoEOF;
 
     public Solmu() {
+        
+        pseudoEOF = false;
 
     }
 
@@ -35,6 +38,10 @@ public class Solmu implements Comparable<Solmu> {
 
     }
     
+    public void setPseudoEOF() {
+        this.pseudoEOF = true;
+    }
+    
     public Solmu getVasen() {
         return this.vasen;
     }
@@ -49,6 +56,14 @@ public class Solmu implements Comparable<Solmu> {
     
     public byte getMerkki() {
         return this.merkki;
+    }
+    
+    public String getKoodi() {
+        return this.koodi;
+    }
+    
+    public boolean isPseudoEOF() {
+        return pseudoEOF;
     }
 
     @Override

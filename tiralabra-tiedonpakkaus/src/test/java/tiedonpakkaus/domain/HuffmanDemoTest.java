@@ -91,7 +91,7 @@ public class HuffmanDemoTest {
         huffman.kooditaulu.put("c", "100");
         
         huffman.syote = "acb";
-        String koodi = huffman.koodaaSyote();
+        String koodi = huffman.koodaaMerkkijono();
         
         assertEquals("0100111", koodi);
         
