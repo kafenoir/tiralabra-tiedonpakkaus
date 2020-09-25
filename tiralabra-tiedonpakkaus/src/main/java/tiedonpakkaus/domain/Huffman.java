@@ -26,8 +26,6 @@ public class Huffman {
         luoKooditaulu(juuri, tavunKoodi);
         String koodiM = koodaaTavut(tavut);
 
-        System.out.println(koodiM);
-
         byte[] koodiT = koodiTavuiksi(koodiM);
 
         return koodiT;
@@ -99,8 +97,6 @@ public class Huffman {
         if (solmu.getVasen() == null && solmu.getOikea() == null) {
             kooditaulu.put(solmu.getMerkki(), koodi);
             solmu.setKoodi(koodi);
-            System.out.println((int) solmu.getMerkki());
-            System.out.println(solmu.getKoodi());
 
         } else {
 
