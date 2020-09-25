@@ -6,9 +6,9 @@ Toteutan tiralabra-projektissa kaksi pakkausalgoritmia: Huffmanin koodauksen ja 
 
 [Määrittelydokumentti](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/maarittelydokumentti.md)
 
-[Toteutusdokumentti] (https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/toteutusdokumentti.md)
+[Toteutusdokumentti](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/toteutusdokumentti.md)
 
-[Testausdokumentti] (https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/testausdokumentti.md)
+[Testausdokumentti](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/testausdokumentti.md)
 
 ### Viikkoraportit
 
