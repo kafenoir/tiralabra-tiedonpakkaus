@@ -61,7 +61,7 @@ public class HuffmanDemoTest {
 
     @Test
     public void pakkausPalauttaaOikeanKoodin() {
-        
+
         huffman.laskeFrekvenssit("abcdef");
         huffman.frekvenssit.put("a", 45);
         huffman.frekvenssit.put("b", 13);
@@ -76,32 +76,32 @@ public class HuffmanDemoTest {
         String a = huffman.kooditaulu.get("a");
         String c = huffman.kooditaulu.get("c");
         String e = huffman.kooditaulu.get("e");
-        
+
         assertEquals("0", a);
         assertEquals("100", c);
         assertEquals("1101", e);
-         
+
     }
-    
+
     @Test
     public void palautettuKoodiVastaaSyotetta() {
-        
+
         huffman.kooditaulu.put("a", "0");
         huffman.kooditaulu.put("b", "111");
         huffman.kooditaulu.put("c", "100");
-        
+
         huffman.syote = "acb";
         String koodi = huffman.koodaaMerkkijono();
-        
+
         assertEquals("0100111", koodi);
-        
+
     }
-    
+
     @Test
     public void purkuPalauttaaAlkuperaisenSyotteen() {
-        
+
         String syote = "00011";
-        
+
         SolmuDemo juuriSolmu = new SolmuDemo();
         SolmuDemo frekvenssiSolmu = new SolmuDemo();
         SolmuDemo aSolmu = new SolmuDemo();
@@ -110,17 +110,17 @@ public class HuffmanDemoTest {
         bSolmu.setMerkki("b");
         SolmuDemo cSolmu = new SolmuDemo();
         cSolmu.setMerkki("c");
-        
+
         juuriSolmu.setVasen(frekvenssiSolmu);
         juuriSolmu.setOikea(cSolmu);
         frekvenssiSolmu.setVasen(aSolmu);
         frekvenssiSolmu.setOikea(bSolmu);
-        
+
         huffman.juuri = juuriSolmu;
         String purettuKoodi = huffman.huffmanPura(syote);
-        
+
         assertEquals("abc", purettuKoodi);
-        
+
     }
 
 }

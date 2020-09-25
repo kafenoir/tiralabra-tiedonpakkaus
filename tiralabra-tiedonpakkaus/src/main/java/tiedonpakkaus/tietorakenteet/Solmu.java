@@ -27,6 +27,10 @@ public class Solmu implements Comparable<Solmu> {
     public void setMerkki(byte merkki) {
         this.merkki = merkki;
     }
+    
+    public void setKoodi(String koodi) {
+        this.koodi = koodi;
+    }
 
     public void setVasen(Solmu vasen) {
         this.vasen = vasen;
@@ -57,6 +61,7 @@ public class Solmu implements Comparable<Solmu> {
     public byte getMerkki() {
         return this.merkki;
     }
+    
     
     public String getKoodi() {
         return this.koodi;

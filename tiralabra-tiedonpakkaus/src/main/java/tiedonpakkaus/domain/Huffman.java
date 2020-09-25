@@ -11,14 +11,15 @@ public class Huffman {
 
     public Huffman() {
 
+        this.kooditaulu = new HashMap<>();
+
     }
 
     public byte[] suoritaHuffman(byte[] tavut) {
 
-        this.kooditaulu = new HashMap<>();
         HashMap<Byte, Integer> frekvenssit = laskeFrekvenssitTavuille(tavut);
         PriorityQueue<Solmu> minimikeko = rakennaKekoTavuista(frekvenssit);
-        Solmu juuri = rakennaHuffmanPuu(frekvenssit, minimikeko);
+        Solmu juuri = rakennaHuffmanPuu(minimikeko);
         String tavunKoodi = "";
         luoKooditaulu(juuri, tavunKoodi);
         String koodiM = koodaaTavut(tavut);
@@ -70,9 +71,9 @@ public class Huffman {
         return minimikeko;
     }
 
-    public Solmu rakennaHuffmanPuu(HashMap<Byte, Integer> frekvenssit, PriorityQueue<Solmu> keko) {
+    public Solmu rakennaHuffmanPuu(PriorityQueue<Solmu> keko) {
 
-        int n = frekvenssit.size() + 1;
+        int n = keko.size();
 
         for (int i = 1; i < n; i++) {
             Solmu solmu = new Solmu();
@@ -92,6 +93,7 @@ public class Huffman {
 
         if (solmu.getVasen() == null && solmu.getOikea() == null) {
             kooditaulu.put(solmu.getMerkki(), koodi);
+            solmu.setKoodi(koodi);
 
         } else {
 
@@ -123,15 +125,12 @@ public class Huffman {
 
     public byte[] koodiTavuiksi(String koodi) {
 
-        int n = koodi.length();
-        byte[] koodiTavuina = new byte[koodi.length()];
-        int laskuri = n;
+        byte[] koodiTavuina = new byte[koodi.length() / 8];
         int j = 0;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < koodiTavuina.length; i++) {
 
-            koodiTavuina[i] = (byte) Integer.parseInt(koodi.substring(j, j + 8));
-
+            koodiTavuina[i] = (byte) Integer.parseInt(koodi.substring(j, j + 8), 2);
             j = j + 8;
         }
 

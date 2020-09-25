@@ -1,6 +1,7 @@
 package tiedonpakkaus.domain;
 
 import java.util.*;
+import tiedonpakkaus.file.Tallennus;
 import tiedonpakkaus.file.TiedostoSanakirja;
 import tiedonpakkaus.file.TiedostonLuku;
 
@@ -12,12 +13,14 @@ public class TPPalvelu {
     HuffmanDemo huffmanDemo;
     Huffman huffman;
     TiedostonLuku tiedostonLuku;
+    Tallennus tallennus;
 
     public TPPalvelu() {
 
         huffman = new Huffman();
         huffmanDemo = new HuffmanDemo();
         tiedostonLuku = new TiedostonLuku();
+        tallennus = new Tallennus();
 
     }
 
@@ -52,12 +55,11 @@ public class TPPalvelu {
 //
 //        return tuloste;
 //    }
-    public void suoritaHuffmanTiedostolle(String nimi) {
+    public void suoritaHuffmanTiedostolle(String nimiL, String nimiT) {
 
-        byte[] tavut = tiedostonLuku.lueTiedosto(nimi);
-        huffman.suoritaHuffman(tavut);
-        
-            
+        byte[] tavut = tiedostonLuku.lueTiedosto(nimiL);
+        byte[] huffmanKoodi = huffman.suoritaHuffman(tavut);
+        tallennus.kirjoita(huffmanKoodi, nimiT);        
     }
 
     public HashMap<String, Integer> luoSanakirjaTiedostosta(String nimi) {
@@ -74,17 +76,5 @@ public class TPPalvelu {
 
         return sanakirja;
 
-    }
-    
-    public byte[] lueTiedosto(String nimi) {
-        
-        byte[] tavut = tiedostonLuku.lueTiedosto(nimi);
-        
-        for (byte tavu : tavut) {
-            System.out.println(tavu);
-        }
-        
-        return tavut;
-        
     }
 }

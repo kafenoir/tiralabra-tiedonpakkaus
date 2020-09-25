@@ -7,21 +7,24 @@ import java.io.IOException;
 
 public class TiedostonLuku {
 
-    byte[] tavut;
 
     public TiedostonLuku() {
 
     }
 
     public byte[] lueTiedosto(String nimi) {
+        
+        byte[] tavut = new byte[0];
 
         try {
 
             File tiedosto = new File(nimi);
-            this.tavut = new byte[(int) tiedosto.length()];
+            tavut = new byte[(int) tiedosto.length()];
             FileInputStream lukija = new FileInputStream(tiedosto);
 
-            int koko = lukija.read(tavut);
+            lukija.read(tavut);
+            
+            lukija.close();
 
         } catch (FileNotFoundException ex) {
 

@@ -24,9 +24,12 @@ public class TekstiUI {
             palvelu.suoritaHuffmanMerkkijonolle(syote);
             
         } else if (syote.equals("t")) {
-            System.out.println("Anna tiedostonimi: ");
-            String tiedosto = lukija.nextLine();
-            palvelu.lueTiedosto(tiedosto);
+            System.out.println("Anna luettavan tiedoston nimi: ");
+            String tiedostoL = lukija.nextLine();
+            String[] osat = tiedostoL.split("\\.");
+            String tiedostoT = osat[0] + "_pakattu.dat";
+            palvelu.suoritaHuffmanTiedostolle(tiedostoL, tiedostoT);
+            
         } else {
             System.out.println("Syöte ei kelpaa. Ohjelma lopetetaan.");
             System.exit(0);
