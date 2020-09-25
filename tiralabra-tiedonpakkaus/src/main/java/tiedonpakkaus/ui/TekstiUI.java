@@ -14,21 +14,29 @@ public class TekstiUI {
         TPPalvelu palvelu = new TPPalvelu();
 
         System.out.println("Tervetuloa!");
-        System.out.println("Luetaanko (m)erkkijono vai (t)iedosto?");
+        System.out.println("Valitse toiminto:");
+        System.out.println("(1) Huffman-demo");
+        System.out.println("(2) Pakkaa tiedosto");
+        System.out.println("(3) Pura tiedosto");
         String syote = lukija.nextLine();
 
-        if (syote.equals("m")) {
+        if (syote.equals("1")) {
             System.out.println("Syötä merkkijono: ");
             syote = lukija.nextLine();
             System.out.println("Luodaan ja puretaan Huffman-koodi: ");
             palvelu.suoritaHuffmanMerkkijonolle(syote);
             
-        } else if (syote.equals("t")) {
+        } else if (syote.equals("2")) {
             System.out.println("Anna luettavan tiedoston nimi: ");
             String tiedostoL = lukija.nextLine();
             String[] osat = tiedostoL.split("\\.");
             String tiedostoT = osat[0] + "_pakattu.dat";
             palvelu.suoritaHuffmanTiedostolle(tiedostoL, tiedostoT);
+            
+        } else if (syote.equals("3")) {
+            System.out.println("Anna purettavan tiedoston nimi: ");
+            String tiedostoP = lukija.nextLine();
+            palvelu.puraTiedosto(tiedostoP);
             
         } else {
             System.out.println("Syöte ei kelpaa. Ohjelma lopetetaan.");

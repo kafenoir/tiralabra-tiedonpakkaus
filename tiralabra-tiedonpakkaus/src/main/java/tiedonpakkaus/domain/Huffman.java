@@ -6,6 +6,7 @@ import java.util.PriorityQueue;
 
 public class Huffman {
 
+    HashMap<Byte, Integer> frekvenssitaulu;
     HashMap<Byte, String> kooditaulu;
     Solmu[] solmut;
 
@@ -18,11 +19,15 @@ public class Huffman {
     public byte[] suoritaHuffman(byte[] tavut) {
 
         HashMap<Byte, Integer> frekvenssit = laskeFrekvenssitTavuille(tavut);
+        this.frekvenssitaulu = frekvenssit;
         PriorityQueue<Solmu> minimikeko = rakennaKekoTavuista(frekvenssit);
         Solmu juuri = rakennaHuffmanPuu(minimikeko);
         String tavunKoodi = "";
         luoKooditaulu(juuri, tavunKoodi);
         String koodiM = koodaaTavut(tavut);
+
+        System.out.println(koodiM);
+
         byte[] koodiT = koodiTavuiksi(koodiM);
 
         return koodiT;
@@ -94,6 +99,8 @@ public class Huffman {
         if (solmu.getVasen() == null && solmu.getOikea() == null) {
             kooditaulu.put(solmu.getMerkki(), koodi);
             solmu.setKoodi(koodi);
+            System.out.println((int) solmu.getMerkki());
+            System.out.println(solmu.getKoodi());
 
         } else {
 
@@ -138,8 +145,50 @@ public class Huffman {
 
     }
 
+    public byte[] huffmanPura(String koodi, HashMap<Byte, Integer> frekvenssit) {
+
+        byte[] tavut = new byte[koodi.length()];
+        PriorityQueue<Solmu> keko = rakennaKekoTavuista(frekvenssit);
+        Solmu juuri = rakennaHuffmanPuu(keko);
+        StringBuilder rakentaja = new StringBuilder();
+        Solmu solmu = juuri;
+        int j = 0;
+        int i = 0;
+        while (i < koodi.length()) {
+            if (solmu.getVasen() == null && solmu.getOikea() == null) {
+                if (solmu.isPseudoEOF()) {
+                    break;
+                }
+
+                tavut[j] = solmu.getMerkki();
+                j++;
+                solmu = juuri;
+            } else {
+                if (koodi.charAt(i) == '0') {
+                    solmu = solmu.getVasen();
+                }
+                if (koodi.charAt(i) == '1') {
+                    solmu = solmu.getOikea();
+                }
+                i++;
+            }
+        }
+
+        byte[] tavutT = new byte[j];
+        for (int k = 0; k < j; k++) {
+            tavutT[k] = tavut[k];
+        }
+
+        return tavutT;
+    }
+
     public HashMap<Byte, String> getKooditaulu() {
 
         return this.kooditaulu;
+    }
+
+    public HashMap<Byte, Integer> getFrekvenssitaulu() {
+
+        return this.frekvenssitaulu;
     }
 }

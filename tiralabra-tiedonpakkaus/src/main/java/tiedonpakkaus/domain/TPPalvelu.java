@@ -59,13 +59,24 @@ public class TPPalvelu {
 
         byte[] tavut = tiedostonLuku.lueTiedosto(nimiL);
         byte[] huffmanKoodi = huffman.suoritaHuffman(tavut);
-        tallennus.kirjoita(huffmanKoodi, nimiT);        
+        HashMap<Byte, Integer> frekvenssit = huffman.getFrekvenssitaulu();
+        tallennus.kirjoitaKoodi(huffmanKoodi, frekvenssit, nimiT);
+    }
+
+    public void puraTiedosto(String nimi) {
+
+        tiedostonLuku.luePakattuTiedosto(nimi);
+        HashMap<Byte, Integer> frekvenssit = tiedostonLuku.getFrekvenssit();
+        String koodi = tiedostonLuku.getKoodi();
+        byte[] tavut = huffman.huffmanPura(koodi, frekvenssit);
+        String[] osat = nimi.split("_");
+        nimi = osat[0] + "_purettu.txt";
+        tallennus.kirjoitaPurettu(tavut, nimi);
     }
 
     public HashMap<String, Integer> luoSanakirjaTiedostosta(String nimi) {
 
         HashMap<String, Integer> sanakirja = new HashMap<>();
-        
 
         try {
             TiedostoSanakirja sanak = new TiedostoSanakirja(nimi);
