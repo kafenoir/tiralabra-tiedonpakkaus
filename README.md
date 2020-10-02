@@ -19,3 +19,5 @@ Toteutan tiralabra-projektissa kaksi pakkausalgoritmia: Huffmanin koodauksen ja 
 [Viikkoraportti 3](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/viikkoraportti3.md)
 
 [Viikkoraportti 4](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/viikkoraportti4.md)
+
+[Viikkoraportti 5](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/viikkoraportti5.md)

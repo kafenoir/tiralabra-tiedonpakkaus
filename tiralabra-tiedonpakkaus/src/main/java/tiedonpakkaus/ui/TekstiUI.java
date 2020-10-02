@@ -17,6 +17,7 @@ public class TekstiUI {
         System.out.println("Valitse toiminto:");
         System.out.println("(1) Pakkaa tiedosto");
         System.out.println("(2) Pura tiedosto");
+        System.out.println("(3) Aja LZW");
         String syote = lukija.nextLine();
 
         if (syote.equals("1")) {
@@ -30,6 +31,10 @@ public class TekstiUI {
             System.out.println("Anna purettavan tiedoston nimi: ");
             String tiedostoP = lukija.nextLine();
             palvelu.puraTiedosto(tiedostoP);
+            
+        } else if (syote.equals("3")) {
+            
+            palvelu.suoritaLZW("^WED^WE^WEE^WEB^WET");
 
         } else {
             System.out.println("Syöte ei kelpaa. Ohjelma lopetetaan.");

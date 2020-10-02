@@ -12,12 +12,14 @@ public class TPPalvelu {
     Huffman huffman;
     TiedostonLuku tiedostonLuku;
     Tallennus tallennus;
+    LZW lzw;
 
     public TPPalvelu() {
 
         huffman = new Huffman();
         tiedostonLuku = new TiedostonLuku();
         tallennus = new Tallennus();
+        lzw = new LZW();
 
     }
 
@@ -53,5 +55,13 @@ public class TPPalvelu {
         String[] osat = nimi.split("_");
         nimi = osat[0] + "_purettu.txt";
         tallennus.kirjoitaPurettu(tavut, nimi);
+    }
+    
+    public void suoritaLZW(String syote) {
+        
+        lzw.alustaSanakirjat();
+        int[] koodi = lzw.rakennaSanakirja(syote);
+        lzw.puraLZW(koodi);
+        
     }
 }
