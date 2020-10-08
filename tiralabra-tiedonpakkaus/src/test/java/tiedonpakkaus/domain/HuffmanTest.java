@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import tiedonpakkaus.tietorakenteet.HuffmanKeko;
 import tiedonpakkaus.tietorakenteet.Solmu;
 
 public class HuffmanTest {
@@ -66,7 +67,7 @@ public class HuffmanTest {
         frekvenssit.put((byte) 98, 4);
         frekvenssit.put((byte) 99, 2);
 
-        PriorityQueue<Solmu> keko = huffman.rakennaKekoTavuista(frekvenssit);
+        HuffmanKeko keko = huffman.rakennaKekoTavuista(frekvenssit);
 
         Solmu pseudoEOF = keko.poll();
         Solmu c = keko.poll();
@@ -87,7 +88,7 @@ public class HuffmanTest {
         frekvenssit.put((byte) 98, 5);
         frekvenssit.put((byte) 99, 9);
 
-        PriorityQueue<Solmu> keko = huffman.rakennaKekoTavuista(frekvenssit);
+        HuffmanKeko keko = huffman.rakennaKekoTavuista(frekvenssit);
 
         Solmu juuri = huffman.rakennaHuffmanPuu(keko);
 

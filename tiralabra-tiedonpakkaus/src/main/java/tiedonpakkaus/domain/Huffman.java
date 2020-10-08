@@ -1,6 +1,7 @@
 package tiedonpakkaus.domain;
 
 import tiedonpakkaus.tietorakenteet.Solmu;
+import tiedonpakkaus.tietorakenteet.HuffmanKeko;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
@@ -20,7 +21,7 @@ public class Huffman {
 
         HashMap<Byte, Integer> frekvenssit = laskeFrekvenssitTavuille(tavut);
         this.frekvenssitaulu = frekvenssit;
-        PriorityQueue<Solmu> minimikeko = rakennaKekoTavuista(frekvenssit);
+        HuffmanKeko minimikeko = rakennaKekoTavuista(frekvenssit);
         Solmu juuri = rakennaHuffmanPuu(minimikeko);
         String tavunKoodi = "";
         luoKooditaulu(juuri, tavunKoodi);
@@ -49,9 +50,9 @@ public class Huffman {
         return frekvenssit;
     }
 
-    public PriorityQueue<Solmu> rakennaKekoTavuista(HashMap<Byte, Integer> frekvenssit) {
+    public HuffmanKeko rakennaKekoTavuista(HashMap<Byte, Integer> frekvenssit) {
 
-        PriorityQueue<Solmu> minimikeko = new PriorityQueue<>();
+        HuffmanKeko minimikeko = new HuffmanKeko(frekvenssit.size() + 1);
         solmut = new Solmu[frekvenssit.size() + 1];
         int indeksi = 0;
 
@@ -74,9 +75,9 @@ public class Huffman {
         return minimikeko;
     }
 
-    public Solmu rakennaHuffmanPuu(PriorityQueue<Solmu> keko) {
+    public Solmu rakennaHuffmanPuu(HuffmanKeko keko) {
 
-        int n = keko.size();
+        int n = keko.getKoko();
 
         for (int i = 1; i < n; i++) {
             Solmu solmu = new Solmu();
@@ -144,7 +145,7 @@ public class Huffman {
     public byte[] huffmanPura(String koodi, HashMap<Byte, Integer> frekvenssit) {
 
         byte[] tavut = new byte[koodi.length()];
-        PriorityQueue<Solmu> keko = rakennaKekoTavuista(frekvenssit);
+        HuffmanKeko keko = rakennaKekoTavuista(frekvenssit);
         Solmu juuri = rakennaHuffmanPuu(keko);
         StringBuilder rakentaja = new StringBuilder();
         Solmu solmu = juuri;
