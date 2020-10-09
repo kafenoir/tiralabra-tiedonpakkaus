@@ -15,30 +15,41 @@ public class TekstiUI {
 
         System.out.println("Tervetuloa!");
         System.out.println("Valitse toiminto:");
-        System.out.println("(1) Pakkaa tiedosto");
-        System.out.println("(2) Pura tiedosto");
-        System.out.println("(3) Aja LZW");
+        System.out.println("(1) Pakkaa tiedosto (Huffman)");
+        System.out.println("(2) Pura tiedosto (Huffman)");
+        //System.out.println("(3) Pakkaa tiedosto (LZW)");
+        //System.out.println("(4) Pura tiedosto (LZW)");
         String syote = lukija.nextLine();
 
         if (syote.equals("1")) {
-            System.out.println("Anna luettavan tiedoston nimi: ");
+            System.out.println("Anna pakattavan tiedoston nimi: ");
             String tiedostoL = lukija.nextLine();
             String[] osat = tiedostoL.split("\\.");
-            String tiedostoT = osat[0] + "_pakattu.dat";
+            String tiedostoT = osat[0] + "_hm.dat";
             palvelu.suoritaHuffmanTiedostolle(tiedostoL, tiedostoT);
 
         } else if (syote.equals("2")) {
             System.out.println("Anna purettavan tiedoston nimi: ");
             String tiedostoP = lukija.nextLine();
             palvelu.puraTiedosto(tiedostoP);
-            
+
         } else if (syote.equals("3")) {
+
+            System.out.println("Anna pakattavan tiedoston nimi: ");
+            String tiedostoL = lukija.nextLine();
+            String[] osat = tiedostoL.split("\\.");
+            String tiedostoT = osat[0] + "_zlw.dat";
+            palvelu.suoritaLZW(tiedostoL, tiedostoT);
+
+        } else if (syote.equals("4")) {
+
+            System.out.println("Anna purettavan tiedoston nimi: ");
+            String tiedostoP = lukija.nextLine();
+            palvelu.puraLZW(tiedostoP);
             
-            //palvelu.suoritaLZW("^WED^WE^WEE^WEB^WET");
-            palvelu.suoritaLZW("ABCABCAABC");
 
         } else {
-            System.out.println("SyÃ¶te ei kelpaa. Ohjelma lopetetaan.");
+            System.out.println("Syöte ei kelpaa. Ohjelma lopetetaan.");
             System.exit(0);
         }
 

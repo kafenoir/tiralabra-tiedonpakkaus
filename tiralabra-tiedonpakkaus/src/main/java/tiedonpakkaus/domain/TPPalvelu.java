@@ -25,7 +25,7 @@ public class TPPalvelu {
 
     /**
      * Kutsuu tiedostoihin liittyvien luokkien metodeja luku- ja
-     * tallenusoperaatioita varten sek√§ Huffman-luokan metodeja
+     * tallenusoperaatioita varten sek‰ Huffman-luokan metodeja
      * Huffman-pakkaamiseen.
      *
      * @param nimiL luettavan tiedoston nimi
@@ -41,7 +41,7 @@ public class TPPalvelu {
 
     /**
      * Kutsuu tiedostoihin liittyvien luokkien metodeja luku- ja
-     * tallenusoperaatioita varten sek√§ Huffman-luokan metodeja
+     * tallenusoperaatioita varten sek‰ Huffman-luokan metodeja
      * Huffman-purkamiseen.
      *
      * @param nimi purettavan tiedoston nimi
@@ -57,11 +57,21 @@ public class TPPalvelu {
         tallennus.kirjoitaPurettu(tavut, nimi);
     }
     
-    public void suoritaLZW(String syote) {
+    public void suoritaLZW(String nimiL, String nimiT) {
         
-        byte[] tavut = lzw.pakkaaLZW(syote);
-        lzw.tavutKoodiksi(tavut);
-        lzw.puraLZW(tavut);
-  
+        
+        byte[] sisalto = tiedostonLuku.lueTiedosto(nimiL);
+        byte[] tavut = lzw.pakkaaLZW(sisalto);
+        tallennus.kirjoitaZLW(tavut, nimiT);
+
+    }
+    
+    public void puraLZW(String nimi) {
+        
+        byte[] tavut = tiedostonLuku.lueTiedosto(nimi);
+        byte[] tallennettava = lzw.puraLZW(tavut);
+        String[] osat = nimi.split("_");
+        nimi = osat[0] + "_pzlw.txt";
+        tallennus.kirjoitaZLW(tallennettava, nimi);
     }
 }

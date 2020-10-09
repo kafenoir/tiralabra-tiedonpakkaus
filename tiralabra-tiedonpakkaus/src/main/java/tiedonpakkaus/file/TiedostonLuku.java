@@ -96,4 +96,38 @@ public class TiedostonLuku {
     public String getKoodi() {
         return this.koodi;
     }
+
+    public byte[] luePakattuZLW(String nimi) {
+
+        byte[] tavut = new byte[0];
+        int i = 0;
+
+        try {
+
+            File tiedosto = new File(nimi);
+            tavut = new byte[(int) tiedosto.length()];
+            FileInputStream lukija = new FileInputStream(tiedosto);
+            DataInputStream datavirta = new DataInputStream(lukija);
+            while (datavirta.available() > 0) {
+                tavut[i] = datavirta.readByte();
+                i++;
+            }
+            
+            datavirta.close();
+            lukija.close();
+
+
+        } catch (FileNotFoundException ex) {
+
+        } catch (IOException ex) {
+
+        }
+
+        return tavut;
+    }
+    
+    public void lueTiedostoMerkkijonona() {
+        
+        
+    }
 }

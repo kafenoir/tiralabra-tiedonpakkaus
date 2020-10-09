@@ -73,4 +73,23 @@ public class Tallennus {
             Logger.getLogger(Tallennus.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public void kirjoitaZLW(byte[] tavut, String nimi) {
+        
+        try {
+
+            File tiedosto = new File(nimi);
+            FileOutputStream kirjoittaja = new FileOutputStream(tiedosto);
+            
+            kirjoittaja.write(tavut);
+
+            kirjoittaja.close();
+
+        } catch (FileNotFoundException ex) {
+
+        } catch (IOException ex) {
+
+        }
+        
+    }
 }
