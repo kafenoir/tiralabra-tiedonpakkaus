@@ -34,7 +34,8 @@ public class TekstiUI {
             
         } else if (syote.equals("3")) {
             
-            palvelu.suoritaLZW("^WED^WE^WEE^WEB^WET");
+            //palvelu.suoritaLZW("^WED^WE^WEE^WEB^WET");
+            palvelu.suoritaLZW("ABCABCAABC");
 
         } else {
             System.out.println("Syöte ei kelpaa. Ohjelma lopetetaan.");

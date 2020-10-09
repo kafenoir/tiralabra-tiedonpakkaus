@@ -59,9 +59,9 @@ public class TPPalvelu {
     
     public void suoritaLZW(String syote) {
         
-        lzw.alustaSanakirjat();
-        int[] koodi = lzw.rakennaSanakirja(syote);
-        lzw.puraLZW(koodi);
-        
+        byte[] tavut = lzw.pakkaaLZW(syote);
+        lzw.tavutKoodiksi(tavut);
+        lzw.puraLZW(tavut);
+  
     }
 }
