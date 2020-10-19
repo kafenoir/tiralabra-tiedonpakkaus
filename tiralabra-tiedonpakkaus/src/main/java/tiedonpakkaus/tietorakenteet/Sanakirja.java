@@ -7,53 +7,65 @@ package tiedonpakkaus.tietorakenteet;
  */
 public class Sanakirja {
 
-    Tavujono[] tavujonot;
-    int koko;
+    Tavujono[] koodit;
+    int[] etuliitteet;
+    byte[] merkit;
+    int koodiNro;
+    int maxKoko;
     int kap;
-    int indeksi;
 
-    public Sanakirja() {
+    public Sanakirja(int koodinPituus) {
 
-        
+        kap = (int) Math.pow(2, koodinPituus + 1);
+        maxKoko = (int) Math.pow(2, koodinPituus) - 1;
+//        etuliitteet = new int[kap];
+//        merkit = new byte[kap];
+        koodit = new Tavujono[kap];
+
     }
-    
-    public void alustaSanakirja() {
-        
-        this.koko = 0;
-        this.kap = 4999;
 
-        this.tavujonot = new Tavujono[kap];
+    public int getKap() {
+        return kap;
+    }
+
+    public int getKoodi(Tavujono uusi) {
+        Tavujono tallennettu = koodit[uusi.getHajautusarvo()];
+        return tallennettu.getKoodi();
+    }
+
+    public void alustaSanakirja() {
+
+        koodit = new Tavujono[kap];
+        koodiNro = 0;
 
         for (int i = 0; i < 256; i++) {
 
             byte tavu = (byte) i;
-            byte[] tavut = new byte[1];
-            tavut[0] = tavu;
-            Tavujono jono = new Tavujono(tavut, kap);
+            Tavujono jono = new Tavujono(tavu, kap);
             lisaaTavujono(jono);
         }
-        
+
     }
 
     public void lisaaTavujono(Tavujono jono) {
-        jono.setKoodi(koko);
-        tavujonot[jono.getHajautusarvo()] = jono;
-        koko++;
+        jono.setKoodi(koodiNro);
 
-        if (koko > kap * 0.85) {
+        Tavujono linkki = koodit[jono.getHajautusarvo()];
 
-            kap = kap * 2;
-            kasvataSanakirjaa();
+        if (linkki != null) {
 
+            while (linkki.getSeuraava() != null) {
+
+                linkki = linkki.getSeuraava();
+            }
+
+            linkki.setSeuraava(jono);
+
+        } else {
+            koodit[jono.getHajautusarvo()] = jono;
         }
-    }
 
-    private void kasvataSanakirjaa() {
-        Tavujono[] uusiSanakirja = new Tavujono[kap];
-
-        for (int i = 0; i < tavujonot.length; i++) {
-            uusiSanakirja[i] = tavujonot[i];
-        }
+        koodiNro++;
     }
 
     /**
@@ -65,36 +77,33 @@ public class Sanakirja {
      * @param jono Etsittävä tavujono
      * @return tavujonoa vastaava koodi
      */
-    public int sisaltaakoTavujonon(Tavujono jono) {
+    public int sisaltaaTavujonon(Tavujono jono, byte merkki) {
 
-        if (tavujonot[jono.getHajautusarvo()] != null) {
+        Tavujono yhdiste = new Tavujono(jono, merkki, kap);
 
-            Tavujono vertailu = tavujonot[jono.getHajautusarvo()];
+        if (koodit[yhdiste.getHajautusarvo()] != null) {
 
-            while (true) {
+            Tavujono vertailu = koodit[yhdiste.getHajautusarvo()];
 
-                if (jono.onSama(vertailu)) {
-                    return vertailu.getKoodi();
-                }
+            if (yhdiste.onSama(vertailu)) {
+                return vertailu.getKoodi();
+            }
 
-                if (vertailu.getSeuraava() == null) {
-
-                    vertailu.setSeuraava(jono);
-                    jono.setKoodi(koko);
-                    koko++;
-                    return jono.getKoodi();
-                }
+            while (vertailu.getSeuraava() != null) {
 
                 vertailu = vertailu.getSeuraava();
-            }
-        } else {
 
-            lisaaTavujono(jono);
-            return jono.getKoodi();
+                if (yhdiste.onSama(vertailu)) {
+                    return vertailu.getKoodi();
+                }
+            }
+
+            return -1;
+
         }
 
-    }
-    
+        return -1;
 
+    }
 
 }

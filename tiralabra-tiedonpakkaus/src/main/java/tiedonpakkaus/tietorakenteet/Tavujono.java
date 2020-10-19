@@ -13,11 +13,25 @@ public class Tavujono {
      * @param tavut tavujonon sisältämät tavut tavutaulukkona
      * @param kap sanakirjan kapasiteetti hajautusarvon luomista varten
      */
-    public Tavujono(byte[] tavut, int kap) {
+    public Tavujono(byte tavu, int kap) {
 
-        this.tavut = tavut;
-        this.hajautusarvo = hajautuskoodi(this.tavut, kap);
+        this.tavut = new byte[1];
+        this.tavut[0] = tavu;
+        this.hajautusarvo = hajautuskoodi(kap);
     }
+    
+    public Tavujono(Tavujono jono, byte tavu, int kap) {
+        
+        this.tavut = jono.getTavut();
+        byte[] tavutUusi = new byte[tavut.length + 1];
+        for (int i = 0; i < tavut.length; i++) {
+            tavutUusi[i] = tavut[i]; 
+        }
+        tavutUusi[tavut.length] = tavu;
+        this.tavut = tavutUusi;
+        this.hajautusarvo = hajautuskoodi(kap);
+    }
+    
 
     public void setKoodi(int koodi) {
         this.koodi = koodi;
@@ -81,7 +95,7 @@ public class Tavujono {
      * @param kap sanakirjan kapasiteetti
      * @return
      */
-    private static int hajautuskoodi(byte[] tavut, int kap) {
+    private int hajautuskoodi(int kap) {
 
         int isoimmat = 0;
         int h = 0;

@@ -23,8 +23,8 @@ public class SanakirjaTest {
         assertEquals(4999, sanakirja.kap);
         
         int summa = 0;
-        for (int i = 0; i < sanakirja.tavujonot.length; i++) {
-            if (sanakirja.tavujonot[i] != null) {
+        for (int i = 0; i < sanakirja.koodit.length; i++) {
+            if (sanakirja.koodit[i] != null) {
                 summa++;
             }
         }

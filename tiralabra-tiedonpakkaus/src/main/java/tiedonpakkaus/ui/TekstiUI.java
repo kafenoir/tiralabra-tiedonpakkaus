@@ -17,7 +17,7 @@ public class TekstiUI {
         System.out.println("Valitse toiminto:");
         System.out.println("(1) Pakkaa tiedosto (Huffman)");
         System.out.println("(2) Pura tiedosto (Huffman)");
-        //System.out.println("(3) Pakkaa tiedosto (LZW)");
+        System.out.println("(3) Pakkaa tiedosto (LZW)");
         //System.out.println("(4) Pura tiedosto (LZW)");
         String syote = lukija.nextLine();
 
@@ -45,7 +45,6 @@ public class TekstiUI {
 
             System.out.println("Anna purettavan tiedoston nimi: ");
             String tiedostoP = lukija.nextLine();
-            palvelu.puraLZW(tiedostoP);
             
 
         } else {

@@ -3,6 +3,7 @@ package tiedonpakkaus.domain;
 import java.util.*;
 import tiedonpakkaus.file.Tallennus;
 import tiedonpakkaus.file.TiedostonLuku;
+import tiedonpakkaus.util.LZW;
 
 /**
  * Sovelluslogiikasta vastaava luokka.
@@ -12,14 +13,12 @@ public class TPPalvelu {
     Huffman huffman;
     TiedostonLuku tiedostonLuku;
     Tallennus tallennus;
-    LZW lzw;
 
     public TPPalvelu() {
 
         huffman = new Huffman();
         tiedostonLuku = new TiedostonLuku();
         tallennus = new Tallennus();
-        lzw = new LZW();
 
     }
 
@@ -36,7 +35,7 @@ public class TPPalvelu {
         byte[] tavut = tiedostonLuku.lueTiedosto(nimiL);
         byte[] huffmanKoodi = huffman.suoritaHuffman(tavut);
         HashMap<Byte, Integer> frekvenssit = huffman.getFrekvenssitaulu();
-        tallennus.kirjoitaKoodi(huffmanKoodi, frekvenssit, nimiT);
+        tallennus.kirjoitaHuffman(huffmanKoodi, frekvenssit, nimiT);
     }
 
     /**
@@ -61,17 +60,16 @@ public class TPPalvelu {
         
         
         byte[] sisalto = tiedostonLuku.lueTiedosto(nimiL);
-        byte[] tavut = lzw.pakkaaLZW(sisalto);
-        tallennus.kirjoitaZLW(tavut, nimiT);
+        tallennus.kirjoitaLZW(nimiT, sisalto, 12);
 
     }
     
-    public void puraLZW(String nimi) {
-        
-        byte[] tavut = tiedostonLuku.lueTiedosto(nimi);
-        byte[] tallennettava = lzw.puraLZW(tavut);
-        String[] osat = nimi.split("_");
-        nimi = osat[0] + "_pzlw.txt";
-        tallennus.kirjoitaZLW(tallennettava, nimi);
-    }
+//    public void puraLZW(String nimi) {
+//        
+//        byte[] tavut = tiedostonLuku.lueTiedosto(nimi);
+//        byte[] tallennettava = lzw.puraLZW(tavut);
+//        String[] osat = nimi.split("_");
+//        nimi = osat[0] + "_pzlw.txt";
+//        tallennus.kirjoitaZLW(tallennettava, nimi);
+//    }
 }

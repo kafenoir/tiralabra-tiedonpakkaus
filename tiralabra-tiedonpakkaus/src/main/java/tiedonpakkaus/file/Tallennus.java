@@ -3,14 +3,12 @@ package tiedonpakkaus.file;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.nio.ByteBuffer;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import tiedonpakkaus.util.LZW;
 
 public class Tallennus {
 
@@ -18,7 +16,7 @@ public class Tallennus {
 
     }
 
-    public void kirjoitaKoodi(byte[] koodi, HashMap<Byte, Integer> frekvenssit, String nimi) {
+    public void kirjoitaHuffman(byte[] koodi, HashMap<Byte, Integer> frekvenssit, String nimi) {
 
         try {
 
@@ -74,14 +72,14 @@ public class Tallennus {
         }
     }
     
-    public void kirjoitaZLW(byte[] tavut, String nimi) {
+    public void kirjoitaLZW(String nimi, byte[] tavut, int koodinPituus) {
         
         try {
 
             File tiedosto = new File(nimi);
             FileOutputStream kirjoittaja = new FileOutputStream(tiedosto);
-            
-            kirjoittaja.write(tavut);
+            LZW lzw = new LZW();
+            lzw.suoritaLZW(tavut, koodinPituus, kirjoittaja);
 
             kirjoittaja.close();
 
