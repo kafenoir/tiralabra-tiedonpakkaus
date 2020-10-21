@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import tiedonpakkaus.util.LZWDekoodaus;
 
 public class TiedostonLuku {
 
@@ -97,24 +98,20 @@ public class TiedostonLuku {
         return this.koodi;
     }
 
-    public byte[] luePakattuZLW(String nimi) {
-
+    public byte[] luePakattuLZW(String nimi, int koodinPituus, int maksimiKoodinPituus) {
+        
         byte[] tavut = new byte[0];
-        int i = 0;
 
         try {
 
             File tiedosto = new File(nimi);
-            tavut = new byte[(int) tiedosto.length()];
             FileInputStream lukija = new FileInputStream(tiedosto);
-            DataInputStream datavirta = new DataInputStream(lukija);
-            while (datavirta.available() > 0) {
-                tavut[i] = datavirta.readByte();
-                i++;
-            }
+            LZWDekoodaus lzw = new LZWDekoodaus(koodinPituus, maksimiKoodinPituus, lukija);
+            tavut = lzw.dekoodaa();
             
-            datavirta.close();
+            
             lukija.close();
+            
 
 
         } catch (FileNotFoundException ex) {
@@ -122,12 +119,7 @@ public class TiedostonLuku {
         } catch (IOException ex) {
 
         }
-
+        
         return tavut;
-    }
-    
-    public void lueTiedostoMerkkijonona() {
-        
-        
-    }
+    } 
 }

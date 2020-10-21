@@ -4,7 +4,6 @@ public class Tavujono {
 
     private byte[] tavut;
     private int koodi;
-    private int hajautusarvo;
     private Tavujono seuraava;
 
     /**
@@ -13,23 +12,19 @@ public class Tavujono {
      * @param tavut tavujonon sisältämät tavut tavutaulukkona
      * @param kap sanakirjan kapasiteetti hajautusarvon luomista varten
      */
-    public Tavujono(byte tavu, int kap) {
+    public Tavujono(byte tavu) {
 
         this.tavut = new byte[1];
         this.tavut[0] = tavu;
-        this.hajautusarvo = hajautuskoodi(kap);
     }
     
-    public Tavujono(Tavujono jono, byte tavu, int kap) {
+    public Tavujono(Tavujono jono, byte tavu) {
         
-        this.tavut = jono.getTavut();
+        tavut = jono.getTavut();
         byte[] tavutUusi = new byte[tavut.length + 1];
-        for (int i = 0; i < tavut.length; i++) {
-            tavutUusi[i] = tavut[i]; 
-        }
+        System.arraycopy(this.tavut, 0, tavutUusi, 0, tavut.length);
         tavutUusi[tavut.length] = tavu;
-        this.tavut = tavutUusi;
-        this.hajautusarvo = hajautuskoodi(kap);
+        tavut = tavutUusi;
     }
     
 
@@ -58,11 +53,6 @@ public class Tavujono {
         return this.tavut;
     }
 
-    public int getHajautusarvo() {
-
-        return this.hajautusarvo;
-    }
-
     /**
      * Tarkistaa, ovatko kaksi tavujonoa keskenään samat eli ovatko niiden
      * tavutaulukot identtiset.
@@ -86,32 +76,5 @@ public class Tavujono {
         }
 
         return true;
-    }
-
-    /**
-     * Laskee tavujonolle hajautuskoodin CRC-variantilla.
-     *
-     * @param tavut tavujonon sisältämät tavut
-     * @param kap sanakirjan kapasiteetti
-     * @return
-     */
-    private int hajautuskoodi(int kap) {
-
-        int isoimmat = 0;
-        int h = 0;
-
-        for (int i = 0; i < tavut.length; i++) {
-
-            isoimmat = h & 0xf8000000;
-            h <<= 5;
-            h ^= (isoimmat >> 27);
-            h ^= tavut[i];
-
-        }
-
-        h = h > 0 ? h : h + Integer.MAX_VALUE;
-
-        return h % kap;
-
     }
 }

@@ -3,7 +3,6 @@ package tiedonpakkaus.domain;
 import java.util.*;
 import tiedonpakkaus.file.Tallennus;
 import tiedonpakkaus.file.TiedostonLuku;
-import tiedonpakkaus.util.LZW;
 
 /**
  * Sovelluslogiikasta vastaava luokka.
@@ -59,17 +58,15 @@ public class TPPalvelu {
     public void suoritaLZW(String nimiL, String nimiT) {
         
         
-        byte[] sisalto = tiedostonLuku.lueTiedosto(nimiL);
-        tallennus.kirjoitaLZW(nimiT, sisalto, 12);
+        tallennus.kirjoitaLZW(nimiL, nimiT, 9, 21);
 
     }
     
-//    public void puraLZW(String nimi) {
-//        
-//        byte[] tavut = tiedostonLuku.lueTiedosto(nimi);
-//        byte[] tallennettava = lzw.puraLZW(tavut);
-//        String[] osat = nimi.split("_");
-//        nimi = osat[0] + "_pzlw.txt";
-//        tallennus.kirjoitaZLW(tallennettava, nimi);
-//    }
+    public void puraLZW(String nimi) {
+        
+        byte[] tavut = tiedostonLuku.luePakattuLZW(nimi, 9, 21);
+        String[] osat = nimi.split("\\.");
+        nimi = osat[0] + "_p.txt";
+        tallennus.kirjoitaPurettu(tavut, nimi);
+    }
 }

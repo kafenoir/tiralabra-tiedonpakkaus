@@ -65,7 +65,7 @@ public class Huffman {
             indeksi++;
         }
 
-        // lis√§t√§√§n pseudoEOF (end of file character), joka osoittaa Huffman-koodin loppumisen
+        // lis‰t‰‰n pseudoEOF (end of file character), joka osoittaa Huffman-koodin loppumisen
         Solmu pseudoEOF = new Solmu();
         pseudoEOF.setPseudoEOF();
         pseudoEOF.setFrekvenssi(1);

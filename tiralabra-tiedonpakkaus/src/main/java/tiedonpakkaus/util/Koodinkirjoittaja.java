@@ -1,42 +1,38 @@
-
 package tiedonpakkaus.util;
 
 import java.io.IOException;
 import java.io.OutputStream;
 
+public class Koodinkirjoittaja extends OutputStream {
 
-public class Koodinkirjoittaja {
-    
-    int pituus;
-    int puskuri;
-    int lkm;
-    OutputStream tuloste;
-    
-    public Koodinkirjoittaja(int koodinPituus, OutputStream tuloste) {
-        
-        this.tuloste = tuloste;
-        this.pituus = koodinPituus;
+    byte[] koodaus;
+    int koodiIndeksi;
+    int bittiPuskuri;
+    int bittejaPuskurissa;
+    int koodinPituus;
+
+    public Koodinkirjoittaja(byte[] koodaus) {
+
+        this.koodaus = koodaus;
+        koodiIndeksi = 0;
+        bittiPuskuri = 0;
+        bittejaPuskurissa = 0;
     }
-    
-    public void kirjoita(int koodi) throws IOException {
-        
-        puskuri |= koodi << (32 - pituus - lkm);
-        lkm += pituus;
-        
-        while (lkm >= 8) {
-            tuloste.write(puskuri >>> 24);
-            puskuri <<= 8;
-            lkm -= 8;
-        }
-            
-    }
-    
-    public void tyhjennä() throws IOException {
-        kirjoita(0);
-        
-        if (tuloste != null) {
-            tuloste.flush();
+
+    @Override
+    public void write(int indeksi) throws IOException {
+        bittiPuskuri |= indeksi << (32 - koodinPituus - bittejaPuskurissa);
+        bittejaPuskurissa += koodinPituus;
+
+        while (bittejaPuskurissa >= 8) {
+            koodaus[koodiIndeksi] = (byte) (bittiPuskuri >>> 24);
+            koodiIndeksi++;
+            bittiPuskuri <<= 8;
+            bittejaPuskurissa -= 8;
         }
     }
     
+    public void kasvataKoodinPituutta() {
+        koodinPituus++;
+    }
 }

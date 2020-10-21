@@ -1,14 +1,16 @@
 package tiedonpakkaus.file;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.DataOutputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import tiedonpakkaus.util.LZW;
+import tiedonpakkaus.util.LZWKoodaus;
 
 public class Tallennus {
 
@@ -71,15 +73,23 @@ public class Tallennus {
             Logger.getLogger(Tallennus.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public void kirjoitaLZW(String nimi, byte[] tavut, int koodinPituus) {
-        
+
+    public void kirjoitaLZW(String nimiL, String nimiT, int alkuPituus, int maxPituus) {
+
         try {
 
-            File tiedosto = new File(nimi);
-            FileOutputStream kirjoittaja = new FileOutputStream(tiedosto);
-            LZW lzw = new LZW();
-            lzw.suoritaLZW(tavut, koodinPituus, kirjoittaja);
+            File tiedosto = new File(nimiL);
+            byte[] syote = new byte[(int) tiedosto.length()];
+            FileInputStream lukija = new FileInputStream(new File(nimiL));
+
+            lukija.read(syote);
+
+            lukija.close();
+
+            FileOutputStream kirjoittaja = new FileOutputStream(new File(nimiT));
+            LZWKoodaus lzw = new LZWKoodaus(alkuPituus, maxPituus, new BufferedOutputStream(kirjoittaja));
+            lzw.koodaa(syote);
+            lzw.lopeta();
 
             kirjoittaja.close();
 
@@ -88,6 +98,6 @@ public class Tallennus {
         } catch (IOException ex) {
 
         }
-        
+
     }
 }

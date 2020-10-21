@@ -1,0 +1,2143 @@
+The Project Gutenberg EBook of The Project Gutenberg FAQ 2002, by Jim Tinsley
+
+Copyright laws are changing all over the world. Be sure to check the
+copyright laws for your country before downloading or redistributing
+this or any other Project Gutenberg eBook.
+
+This header should be the first thing seen when viewing this Project
+Gutenberg file.  Please do not remove it.  Do not change or edit the
+header without written permission.
+
+Please read the "legal small print," and other information about the
+eBook and Project Gutenberg at the bottom of this file.  Included is
+important information about your specific rights and restrictions in
+how the file may be used.  You can also find out about how to make a
+donation to Project Gutenberg, and how to get involved.
+
+
+**Welcome To The World of Free Plain Vanilla Electronic Texts**
+
+**eBooks Readable By Both Humans and By Computers, Since 1971**
+
+*****These eBooks Were Prepared By Thousands of Volunteers!*****
+
+
+Title: The Project Gutenberg FAQ 2002
+
+Author: Jim Tinsley
+
+Release Date: October, 2005 [EBook #9109]
+[Yes, we are more than one year ahead of schedule]
+[This file was first posted on September 7, 2003]
+
+Edition: 10
+
+Language: English
+
+Character set encoding: iso-8859-1
+
+*** START OF THE PROJECT GUTENBERG EBOOK THE PROJECT GUTENBERG FAQ 2002 ***
+
+
+
+
+The Project Gutenberg FAQ 2002
+
+by Jim Tinsley
+
+
+
+Important: This file is posted to the Project Gutenberg archives
+not as a current guide, more as a historical reference. I hope
+that future FAQs will be posted, as the project evolves, but
+this one is of its time.
+
+If you want the most up-to-date information from PG, please
+see the current version of the FAQ, from the Project Gutenberg
+site, or, at the time of posting, at:
+
+    http://ibiblio.org/gutenberg/faq/gutfaq.txt
+    or
+    http://ibiblio.org/gutenberg/faq/gutfaq.htm
+
+
+
+
+Acknowledgements
+
+Writing a FAQ for an organization of fanatical proofreaders has
+its ups and downs! I'd like to thank all those who corrected
+my facts and my typos, and especially the people who pointed out
+the lack of clarity in certain answers. The remaining errors and
+opacity are all mine.
+
+
+
+Preface to the archive edition
+
+Ironically, Project Gutenberg, which preserves the writings of
+others, doesn't have much written history itself. There are
+scraps of e-mails and guidelines, but many newsletters and other
+internal writings before 1996 have gone to the great bit-bucket
+in the sky.
+
+The later half of the '90s marked a graceful blooming of Project
+Gutenberg's growth. Three related technical factors contributed: the
+explosion in home PCs brought standardization, which made it easy
+for non-techies to install scanners, which, in response to the new
+demand, became plentiful and cheap. And, of course, these years saw
+the rise in popularity of the Internet, which has always been PG's
+main channel of communication and distribution.
+
+However, while PG's production expanded geometrically, at Moore's
+Law rates, there were barriers to participation. Most volunteers had
+to find an eligible book, scan or type it, and proof the resulting
+text all by themselves. This was and is a fairly significant amount
+of work: 40 painstaking hours would be a typical commitment for one
+book.
+
+Beyond that, simply learning the mechanics of producing e-texts
+could be a serious challenge for newcomers. Nearly all internal
+PG communication, except for the Newsletter, was by private e-mail,
+and instructions had to be repeated many times to individual new
+volunteers, all of whom showed up with great good will, but most of
+whom vanished after a week or two.
+
+Michael Hart was unstinting in his editing of incoming texts and
+handling questions by e-mail, but any one person has only so many
+hours.
+
+The Directors of Production at the time -- Sue Asscher, Dianne Bean,
+John Bickers and David Price -- served as contact points for advice
+and help, made enormous efforts of production themselves, and tried
+to share the scanned texts among new volunteers for proofing. They
+made a huge contribution to building community in PG.
+
+Pietro Di Miceli set up a web site for the project in 1996, and with
+the popularization of the Web (as opposed to the Internet), this became
+a beacon for readers and new volunteers.
+
+All of these people reached out to willing volunteers, drew them in,
+helped them, encouraged them. The Project and all of the readers of
+the books, now and in the future, owe these people a great debt.
+Without them, Project Gutenberg could not have achieved what it has.
+But still, for the most part, each volunteer worked alone.
+
+
+In 1999, I wrote, in response to an offer to volunteer:
+
+    I think I can best answer your offer, and many others like it,
+    by giving an extended description of what actually happens in
+    the making of PG texts, and why it's often not easy to get
+    started.
+
+    There is no agenda, no master list of tasks ready to be given to
+    volunteers. This is often the hardest thing to get across to new
+    volunteers. I know I waited quite a while after volunteering for
+    someone to give me a job to do before I realized it.
+
+
+    Exactly five steps are normally performed in the publishing of
+    an e-text.
+
+    1. Someone, somewhere gets a public-domain copy of a text they
+       want to contribute.
+
+    2. That volunteer confirms its PD status by sending TP&V to
+       Michael, and getting copyright clearance.
+
+    3. Someone, usually the same volunteer, scans and corrects the
+       text, or, if skilled in typing, types the book into an e-text.
+
+    4. Someone, often a different volunteer, second-proofs the
+       e-text, removing the smaller errors.
+
+    5. The e-text is sent to Michael for posting.
+
+
+    There are three barriers which make it difficult for most people
+    to contribute:
+
+    1. Getting a PD book.
+
+    2. People without scanners and typing skills have no way of
+       turning a book into an e-text.
+
+    3. Even with a scanner, turning a book into an e-text is not
+       easy or quick.
+
+    Since, generally, people who have a PD book don't just want to
+    send it off to a stranger for scanning, the people who produce
+    e-texts have to get over all three of these barriers. This is
+    the bottleneck in production. It's relatively easy to get an
+    e-text second-proofed; making it in the first place is the
+    hardest part. You need to have a book, the means to turn it into
+    an e-text and the time and will to do it.
+
+    After that comes second proofing. There are two problems here.
+    One is that there may not be enough texts for all the people who
+    want to second-proof; the other is that a lot of beginners just
+    abandon texts given to them for second-proofing, which holds up
+    the process and is discouraging for others. So a lot of
+    volunteers do their own second-proofing or send their texts to
+    established contacts with a track record of finishing the job,
+    rather than making them available to newbies. The Directors of
+    Production do serve as contact points, and at any given moment
+    may have some texts for proofing, but they can only distribute
+    the texts that have already been made.
+
+
+    With that explanation out of the way, I can better address your
+    question of what you can do.
+
+
+    Second-proofing is an easy way to start, but material isn't just
+    waiting for you. If you want to look for some, post your offer
+    here and wait a week or so. If no takers by then, e-mail Michael
+    and ask if there are any texts available; he may be able to
+    refer you to a Director of Production who has something current.
+    You may not get an e-text immediately, but you will get one. Of
+    course, you can also look here for offers of e-texts ready to
+    proof.
+
+    Your other option is to take on a book yourself. In your case,
+    you already have a scanner, so you are equipped to become a
+    producer. You need to find a PD book.
+
+    Getting PD books means finding and borrowing or buying them. You
+    can do this through used bookshops, libraries or book sites on
+    the Internet. I mention a few net sites in the FAQ in the link
+    below. I get all my books through them, since they make it easy
+    for me to find the books I want. Prices range from $5 up to (in
+    my case) about $30.
+
+    The best advice I can offer here is: pick a book that you _want_
+    to contribute, and a book you'll enjoy working with--you'll be
+    living with it up close and personal for quite a while.
+
+
+
+In March and April of 1999, Pietro created the PG Volunteers'
+WWWBoard and Greg Newby set up the mailing list gutvol-d, and, for
+the first time, volunteers who hadn't been introduced to each other
+by Michael or the Directors could meet online and communicate
+directly. A few FAQs and HOWTOs were written, covering the basics,
+the nitty-gritty of producing books. All of this activity made it
+much easier for people to get involved, and the Project experienced
+a new influx of interested volunteers. Improved OCR software was
+also a factor at this time: in response to the commoditization of
+scanners, there was rapid improvement in the quality of OCR, and
+better OCR made for easier production of e-texts.  More work was
+shared out in co-operative proofing experiments.
+
+It was in this new, expansive atmosphere, with ideas flooding in
+from enthusiasts newly energized by the project, that Charles Franks
+(Charlz) came up with the idea of a web site that would serve to
+distribute the work of proofing a book among many volunteers. But
+not only did he think of the concept; he went ahead and did it!
+
+In April 2000, Charlz first requested comments on his idea in
+a post on the Volunteers' WWWBoard, and by the end of September,
+the first e-texts were queueing up on the production line.
+
+On October 9th, Charlz wrote:
+
+    Number of pages proofed by date:
+
+    2nd    6
+    3rd    6
+    4th   20  <-- Newsletter
+    5th   27
+    6th   25
+    7th   29
+    8th   30
+    9th   45!! (and the day ain't over yet)
+
+(The "Newsletter" is a reference to the site being mentioned in
+the PG Newsletter on October 4th, 2000).
+
+Distributed Proofreaders, or DP, simply kept growing from there, as
+Charlz kept scanning and adding more books and features and
+proofers, and its simple organic growth produced 600 e-texts in two
+years, but when Charlz asked for more help on Slashdot, a popular
+technical news site, on November 8th, 2002, the response blew the
+roof off! The pages per day figure jumped from 1,000 to about 10,000
+for a while, then settled down at its current 4,000. 4,000 pages,
+even given that each page is proofed twice, is a lot of pages. 2,000
+produced pages per day is about five full books per day. DP has
+formed the backbone of PG's production ever since. Whatever the
+future of DP's production, its effect on shared knowledge and
+resources, and the communication and community it has built, ensures
+that Project Gutenberg will never be the same again.
+
+
+I began writing this FAQ in March 2002, and was essentially finished
+around December 2002. It sat around, with a few tweaks here and
+there in response to comments, until the start of September 2003.
+
+Today, it is a useful guide to Project Gutenberg norms and practices.
+By the time you read it, it may be ancient history ("Hey, Grandad,
+did you REALLY scan things from paper? Why didn't you use your
+brain implant?" :-) But it is one record of How Things Were in
+Project Gutenberg during this time of change.
+
+jim
+September 7th, 2003.
+
+
+
+
+
+
+
+
+Project Gutenberg FAQ 2002
+
+I have a question not answered in this FAQ. How do I ask it?
+
+If it's about how to produce a text, the Volunteers' Board at
+<http://www.gutenberg.net/vol/wwwboard/> is generally the best
+place to ask.
+
+If it's a question of active interest to the general body of
+volunteers, you can ask it on the gutvol-d mailing list. See
+<http://www.gutenberg.net/subs.html> for joining it.
+
+For other questions, you should check our Contact Information page at
+<http://www.gutenberg.net/contactinfo.html> and e-mail the appropriate
+person.
+
+
+       About Project Gutenberg:
+
+G.1.   What is Project Gutenberg?
+G.2.   Where did Project Gutenberg come from?
+G.3.   What has Project Gutenberg achieved?
+G.4.   Who runs Project Gutenberg?
+G.5.   How many people are in Project Gutenberg?
+G.6.   How can I contact Project Gutenberg?
+G.7.   How can I help Project Gutenberg?
+G.8.   How can I keep in touch with what Project Gutenberg is doing?
+G.9.   What is the relationship between Project Gutenberg, Projekt
+       Gutenberg-DE, Project Gutenberg of Australia, and Project Runeberg?
+
+
+       About Project Gutenberg publications:
+
+G.10.  Does Project Gutenberg publish only books?
+G.11.  What books does Project Gutenberg publish?
+G.12.  What other things does Project Gutenberg publish?
+G.13.  How does Project Gutenberg choose books to publish?
+G.14.  What languages does Project Gutenberg publish in?
+G.15.  Why don't you have any / many books about history, geography, science,
+G.16.  Why don't you have any books by Steven King, Tom Clancy,
+       Tolkien, etc.?
+G.17.  Why is Project Gutenberg so set on using Plain Vanilla ASCII?
+
+
+
+Readers' FAQ
+
+       About Finding eBooks:
+
+R.1.   How can I find an eBook I'm looking for?
+R.2.   Can I get a complete list of Project Gutenberg eBooks?
+R.3.   How can I download a PG text that hasn't been cataloged yet?
+R.4.   You don't have the eBook I'm looking for. Can you help me find it?
+R.5.   Where else can I go to get eBooks?
+R.6.   I see some eBooks in several places on the Net. Do different
+       people really re-create the same eBooks?
+
+
+       About Using the Web Site:
+
+R.7.   Why couldn't I reach your site? (or: Why is your site slow?)
+R.8.   I get an error when I try to download a book.
+R.9.   I searched for a book I know is in Project Gutenberg, but got no
+       results.
+R.10.  Can I copy your website, or your website materials?
+R.11.  Your site doesn't look right in my browser.
+       I clicked on a button, and nothing happened.
+R.12.  What does that thing about "Select FTP Site" mean?
+R.13.  What exactly is an FTP site anyway?
+R.14.  Can I become an FTP mirror?
+R.15.  Can I make a private FTP mirror for my school, library or
+       organization?
+R.16.  When I clicked on the file I want, nothing happened.
+R.17.  How many texts are downloaded through the web site?
+R.18.  What are the most popular books?
+
+
+       About Downloading and Using Project Gutenberg eBooks:
+
+R.19.  Should I download a ZIP or a TXT file?
+R.20.  I've got a ZIP file. What do I do with it?
+R.21.  I tried to unzip my file, but it said the file was corrupt, or
+       damaged.
+R.22.  I see gibberish onscreen when I click on a book.
+R.23.  Can I download and read your books?
+R.24.  What am I allowed to do with the books I download?
+R.25.  Does Project Gutenberg know who downloads their books?
+R.26.  I've found some obvious typos in a Project Gutenberg text.
+       How should I report them?
+R.27.  I've found some obvious typos in a Project Gutenberg text.
+       Who should I report them to?
+R.28.  I've reported some typos. What will happen next?
+R.29.  I've got the text file, and I can read it, but it seems to be
+       double-spaced or it has control characters like ^J or ^M at
+       the end of every line.
+R.30.  When I print out the text file, each line runs over the edge
+       of the page and looks bad.
+R.31.  I can read the text file, but a few characters appear as black
+       squares, or gibberish.
+R.32.  Can I get a handheld device for reading PG texts? Which device
+       should I get?
+R.33.  How can I read a PG eBook on my PDA (Palm, iPaq, Rocket . . .)
+
+
+       About the Files:
+
+R.34.  What types of files are there, and how do I read them?
+R.35.  What do the filenames of the texts mean?
+R.36.  What is the difference within PG between an "edition" and a "version"?
+R.37.  What is the difference between an "etext" and an "eBook"?
+R.38.  What are the "Etext/Ebook numbers" on the texts?
+R.39.  What do the month and year on the text mean?
+
+
+
+Copyright FAQ
+
+C.1.   What is copyright?
+C.2.   Does copyright differ from country to country? From state to state?
+C.3.   What are the copyright laws outside the U.S.?
+C.4.   Why does Project Gutenberg advise only on U.S. copyright issues?
+C.5.   I don't live in the U.S. Do these rules apply to me?
+C.6.   What is the public domain?
+C.7.   What can I do with a text that is in the public domain?
+C.8.   How does a book enter the public domain?
+C.9.   How does a copyright lapse?
+C.10.  What books are in the public domain?
+C.11.  My book says that it's "Copyright 1894". Is it in the public domain?
+C.12.  How can a copyright owner release a work into the public domain?
+C.13.  When is an author not the owner of a copyright on his or her works?
+C.14.  What does Project Gutenberg mean by "eligible"?
+C.15.  I have a manuscript from 1900. Is it eligible?
+C.16.  How come my paper book of Shakespeare says it's "Copyright 1988"?
+C.17.  What makes a "new copyright"?
+C.18.  I have a 1990 book that I know was originally written in 1840,
+       but the publisher is claiming a new copyright. What should I do?
+C.19.  I have a 1990 reprint of an 1831 original. Is it eligible?
+C.20.  I have a text that I know was based on a pre-1923 book, but I
+       don't have the title page. Can I submit it to PG?
+C.21.  How does Project Gutenberg "clear" books for copyright?
+C.22.  I want to produce a particular book. Will it be copyright cleared?
+C.23.  I have some extra material (images, introduction, preface, missing
+       chapter) that should go into an existing PG text. Do I have to
+       copyright-clear my edition before submitting it?
+C.24.  I see some Project Gutenberg eBooks that are copyrighted. What's
+       up with that?
+C.25.  What are "non-renewed" books?
+C.26.  How can I get Project Gutenberg to clear a non-renewed book?
+
+
+
+Volunteers' FAQ
+
+       About the Basics:
+
+V.1.   How do I get started as a Project Gutenberg volunteer?
+V.2.   What experience do I need to produce or proof a text?
+V.3.   How do I produce a text?
+V.4.   Do I need any special equipment?
+V.5.   Do I need to be able to program?
+V.6.   I am a programmer, and I would like to help by programming.
+V.7.   What does a Gutenberg volunteer actually do?
+V.8.   Can I produce a book in my own language?
+V.9.   Does it have to be a book? Can I produce pieces from a magazine
+       or other periodical?
+V.10.  Do I _have_ to produce in plain ASCII text?
+V.11.  Where do I sign up as a volunteer?
+V.12.  How do PG volunteers communicate, keep in touch, or co-ordinate work?
+V.13.  Where can I find a list of books that need proofing?
+V.14.  Is there a list of books that Project Gutenberg wants?
+V.15.  I have one book I'd like to contribute. Can I do just that without
+       signing up?
+
+
+       About production:
+
+V.16.  How does a text get produced?
+V.17.  How long must a text be to qualify for PG?
+V.18.  What books are eligible?
+V.19.  Are reprints or facsimiles eligible?
+V.20.  What is the difference between a reprint and a facsimile?
+V.21.  What is the difference between a reprint and a "new edition"?
+V.22.  What book should I work on?
+V.23.  I have a book in mind, but I don't have an eligible copy.
+V.24.  Where can I find an eligible book?
+V.25.  What is "TP&V"?
+V.26.  What is "Posting"?
+V.27.  I think I've found an eligible book that I'd like to work on.
+       What do I do next?
+V.28.  What books are currently being worked on?
+V.29.  How do I find out if my book is already on-line somewhere?
+V.30.  My book is not on the In-Progress list, and I can't find it on-line.
+V.31.  My book is on-line, but not in Project Gutenberg. What should I do?
+V.32.  My book is already on-line in Project Gutenberg, but my printed book
+       is different from the version already archived. Can I add my version?
+V.33.  I see a book that was being worked on three years ago. Is anyone still
+       working on it?
+V.34.  I've decided which book to produce. How do I tell PG
+       I'm working on it?
+V.35.  I have a two- or three-volume set. Should I submit them as one text,
+       or one text for each volume?
+V.36.  I have one physical book, with multiple works in it (like a
+       collection of plays). Should I submit each text separately?
+V.37.  How do I get copyright clearance?
+V.38.  I have a two- or three-volume set. Do I have to get a separate
+       clearance on each physical book?
+V.39.  I have one physical book, with multiple works in it (like a
+       collection of plays). Do I have to get a separate clearance
+       for each work?
+V.40.  Who will check up on my progress? When?
+V.41.  How long should it take me to complete a book?
+V.42.  I want/don't want my name published on my e-text
+V.43.  I'd like to put a copy of my finished e-text, or another
+       Gutenberg text, on my own web page.
+V.44.  I've scanned, edited and proofed my text. How do I find someone
+       to second-proof it?
+V.45.  I've gone over and over my text. I can't find any more errors,
+       and I'm sick of looking at it. What should I do now?
+V.46.  Where and how can I send my text for posting?
+V.47.  What is the "Credits Line"?
+V.48.  How soon after I send it will my text be posted?
+V.49.  I found a problem with my posted text. What do I do?
+V.50.  Someone has e-mailed me about my posted text, pointing out errors.
+V.51.  Someone has e-mailed me about my posted text, thanking me.
+
+
+       About Proofing:
+
+V.52.  What role does proofing play in Project Gutenberg?
+V.53.  What is Distributed Proofing?
+V.54.  What do I need to proof an e-text?
+V.55.  Do I need to have a paper copy of the book I'm proofing?
+V.56.  What's the difference between "first proof" and "second proof"?
+V.57.  What do I do with an e-text sent to me for proofing?
+V.58.  What kinds of errors will I have to correct?
+V.59.  How long does it take to proof an e-text?
+V.60.  Are there any special techniques for proofing?
+V.61.  What actually happens during a proof?
+
+
+       About Net searching:
+
+V.62.  I've found an eligible text elsewhere on the Net, but it's not
+       in the PG archives. Can I just submit it to PG?
+V.63.  I've found an eligible text elsewhere on the Net, but it's not
+       in the PG archives. Why should I submit it to PG?
+V.64.  I have already scanned or typed a book; it's on my web site.
+       How can I get it included in the Gutenberg archives?
+V.65.  I have already scanned or typed a book; it's on my web site.
+       The world can already access it. Why should I add it to the
+       Gutenberg archives?
+V.66.  I have already scanned or typed a book, but it's not in plain text
+       format. Can I submit it to PG?
+
+
+       About author-submitted eBooks:
+
+V.67.  I've written a book. Will PG publish it?
+V.68.  I have translated a classic book from one language to another.
+       Will PG publish my translation?
+V.69.  OK, this is one of the cases where PG will publish it.
+       What do I do next?
+V.70.  I hold the copyright on a book. Can I release it to the public domain?
+V.71.  I hold the copyright on a book. Do I have to release the book
+       into the public domain for Project Gutenberg to publish it?
+V.72.  I hold the copyright on a book, and would like Project Gutenberg
+       to publish it. Can I choose what rights to assign?
+
+
+       About what goes into the texts:
+
+V.73.  Why does PG format texts the way it does?
+
+
+       About the characters you use:
+
+V.74.  What characters can I use?
+V.75.  What is ASCII?
+V.76.  So what is ISO-8859? What is Codepage 437? What is Codepage 1252?
+       What is MacRoman?
+V.77.  What is Unicode?
+V.78.  What is Big-5?
+V.79.  What are "8-bit" and "7-bit" texts?
+V.80.  I have an English text with some quotations from a language that
+       needs accents--what should I do about the accents?
+V.81.  I have some Greek quotations in my book. How can I handle them?
+V.82.  I want to produce a book in a language like Spanish or French
+       with accented characters. What should I do?
+
+
+       About the formatting of a text file:
+
+V.83.  How long should I make my lines of text?
+V.84.  Why should I break lines at all? Why not make the text as one
+       line per paragraph, and let the reader wrap it?
+V.85.  Why use a CR/LF at end of line?
+V.86.  One space or two at the end of a sentence?
+V.87.  How do I indicate paragraphs?
+V.88.  Should I indent the start of every paragraph?
+V.89.  Are there any places where I should indent text?
+V.90.  Can I use tabs (the TAB key) to indent?
+V.91.  How should I treat dashes (hyphens) between words?
+V.92.  How should I treat dashes replacing letters?
+V.93.  What about hyphens at end of line?
+V.94.  What should I do with italics?
+V.95.  Yes, but I have a long passage of my book in italics! I can't
+       really CAPITALIZE or _otherwise_ /mark/ all that text, can I?
+V.96.  Should I capitalize the first word in each chapter?
+V.97.  What is a Transcriber's Note? When should I add one?
+V.98.  Should I keep page numbers in the e-text?
+V.99.  In the exceptional cases where I keep page numbers, how should
+       I format them?
+V.100. Should I keep Tables of Contents?
+V.101. Should I keep Indexes and Glossaries?
+V.102. How do I handle a break from one scene to another, where the
+       book uses blank lines, or a row of asterisks?
+V.103. How should I treat footnotes?
+V.104. My book leaves a space before punctuation like semicolons,
+       question marks, exclamation marks and quotes. Should I do
+       the same?
+V.105. My book leaves a space in the middle of contracted words like
+       "do n't", "we 'll" and "he 's". Should I do the same?
+V.106. How should I handle tables?
+V.107. How should I format letters or journal entries?
+V.108. What can I do with the British pound sign?
+V.109. What can I do with the degree symbol?
+V.110. How should I handle . . . ellipses?
+V.111. How should I handle chapter and section headings?
+V.112. My book has advertisements at the end. Should I keep them?
+V.113. Can I keep Lists of Illustrations, even when producing a
+       plain text file?
+V.114. Can I include the captions of Illustrations, even when producing
+       a plain text file?
+V.115. Can I include images with my text file?
+
+
+       About formatting poetry:
+
+V.116. I'm producing a book of poetry. How should I format it?
+V.117. I'm producing a novel with some short quotations from poems.
+
+
+       About formatting plays:
+
+V.118. How should I format Act and Scene headings?
+V.119. How should I format stage directions?
+V.120. How should I format blank verse?
+
+
+       About some typical formatting issues:
+
+V.121. Sample 1: Typical formatting issues of a novel.
+V.122. Sample 2: Typical formatting issues of non-fiction
+V.123. Sample 3: Typical formatting issues of poetry
+V.124. Sample 4: Typical formatting issues of plays
+
+
+       About problems with the printed books:
+
+V.125. I found some distasteful or offensive passages in a book I'm
+       producing. Should I omit them?
+V.126. Some paragraphs in my book, where a character is speaking,
+       have quotes at the start, but not at the end. Should I close
+       those quotes?
+V.127. The spelling in my book is British English (colour, centre).
+       Should I change these to American spellings?
+V.128. I'm nearly sure that some words in my printed book are typos.
+       Should I change them?
+V.129. Having investigated what looks like a typo, I find it isn't.
+       Do I need to do anything?
+V.130. Aarrgh! Some pages are missing! Do I have to abandon the book?
+V.131. Some words are spelled inconsistently in my book (e.g. sometimes
+       "surprise", sometimes "surprize"). Should I make them consistent?
+
+
+
+Word Processing FAQ
+
+W.1.   What's the difference between an editor and a word processor?
+W.2.   Should I use an editor or a word processor?
+W.3.   Which editor or word processor should I use?
+W.4.   How can I make my word processor easier to work with for plain text?
+W.5.   What is the difference between proportional and non-proportional
+       fonts?
+W.6.   I can't get words in a table or poem to line up under each other.
+
+
+       About using MS-Word:
+
+W.7.   I've edited my book in Word - how do I save it as plain text?
+W.8.   Quotes look wrong when I save a Word document as plain text.
+W.9.   Dashes look wrong when I save a Word document as plain text.
+W.10.  I saved my Word document as HTML, but the HTML looks terrible.
+
+
+
+Scanning FAQ
+
+S.1.   What is a scanner?
+S.2.   What types of scanners are there?
+S.3.   Which scanner should I get?
+S.4.   What is ADF?
+S.5.   Should I get ADF?
+S.6.   What's a "TWAIN driver" and why do I need one?
+S.7.   How do I scan a book?
+S.8.   My book won't open flat enough for a good scan, and I don't
+       want to cut the pages.
+S.9.   How long does it take to scan a book?
+S.10.  What scanner settings are best?
+S.11.  Can I use a digital camera in place of a scanner?
+S.12.  What is OCR?
+S.13.  What differences are there between OCR packages?
+S.14.  How accurate should OCR be?
+S.15.  Which OCR package should I get?
+S.16.  What types of mistakes do OCR packages typically make?
+S.17.  Why am I getting a lot of mistakes in my OCRed text?
+S.18.  I got an OCR package bundled with my scanner. Is it good enough
+       to use?
+S.19.  I want to include some images with a HTML version. How should I
+       scan them?
+S.20.  I want to include some images with a HTML version. What type of
+       image should I use?
+S.21.  Will PG store scanned page images of my book?
+
+
+HTML FAQ
+
+H.1.   Can I submit a HTML version of my text?
+H.2.   Why should I make a HTML version?
+H.3.   Can I submit a HTML version without a plain ASCII version?
+H.4.   What are the PG rules for HTML texts?
+H.5.   Can I use Javascript or other scripting languages in my HTML?
+H.6.   Should I make my HTML edition all on one page, or split it into
+       multiple linked pages?
+H.7.   How can I check that I haven't made mistakes in coding my HTML?
+H.8.   Can I submit a HTML or other format of somebody else's text?
+H.9.   How big can the images be in a HTML file?
+H.10.  The images I've scanned are too big for inclusion in HTML.
+       What can I do about it?
+H.11.  Can I include decorative images I've made or found?
+H.12.  How can I make a plain text version from a HTML file?
+H.13.  How can I make a HTML version from my plain text file?
+
+
+Programs and Programming FAQ
+
+P.1.   What useful programs are available for Project Gutenberg work?
+P.2.   What programs could I write to help with PG work?
+
+
+Formats FAQ
+
+F.1.   What formats does Project Gutenberg publish?
+F.2.   What is, and how do I make or use various formats?
+
+
+Volunteers' Voices - Volunteers talk about PG
+
+       Amy Zelmer
+       Ben Crowder
+       Col Choat
+       Dagny
+       Gardner Buchanan
+       Jim Tinsley
+       John Mamoun
+       Ken Reeder
+       Lynn Hill
+       Sandra Laythorpe
+       Tony Adam
+       Tonya Allen
+       Walter Debeuf
+
+
+Bookmarks - web pages commonly referred to in the FAQ
+
+B.1.   Project Gutenberg
+B.2.   Distributed Proofing Sites
+B.3.   Other On-Line eBook Pages
+B.4.   Lists of Suggested Books to Transcribe
+B.5.   Finding Paper Books On-Line
+
+
+
+
+
+About Project Gutenberg:
+
+
+
+G.1. What is Project Gutenberg?
+
+Project Gutenberg is a volunteer effort to digitize, archive, and
+distribute cultural works.
+
+
+
+G.2. Where did Project Gutenberg come from?
+
+In 1971, Michael Hart was given $100,000,000 worth of computer time on
+a mainframe of the era. Trying to figure out how to put these very
+expensive hours to good use, he envisaged a time when there would be
+millions of connected computers, and typed in the Declaration of
+Independence (all in upper case--there was no lower case available!).
+His idea was that everybody who had access to a computer could have a
+copy of the text. Now, 31 years later, his copy of the Declaration of
+Independence (with lower-case added!) is still available to everyone
+on the Internet.
+
+During the 70s, he added some more classic American texts, and through
+the 80s worked on the Bible and the collected works of Shakespeare.
+That edition of Shakespeare was never released, due to copyright law
+changes, but others followed.
+
+Starting in 1991, Project Gutenberg began to take its current form,
+with many different texts and defined targets. The target for 1991 was
+one book a month. 1992's target was two books a month. This target
+doubled every year through 1996, when it hit 32 books a month.
+
+Today, we have a target of 200 books a month.
+
+
+
+G.3. What has Project Gutenberg achieved?
+
+Project Gutenberg is the original, and oldest, etext project on the
+Internet, founded in 1971.
+
+In mid-2002, we are not only still going, we have made over 5,000
+eBooks available, with a current production target of 200 more each
+month.
+
+We have many mirrors (copies) of our archives on all five continents.
+
+
+
+G.4. Who runs Project Gutenberg?
+
+The Project Gutenberg Literary Archive Foundation is a 501(c)(3)
+organization. Dr. Gregory B. Newby <gbnewby@ils.unc.edu> is our
+volunteer CEO. Professor Michael Hart <hart@pobox.com> is our Founder
+and Executive Director.
+
+In terms of the day-to-day production of eBooks, our volunteers run
+themselves. :-) They produce books, and submit them when completed.
+Our Production Directors help with general volunteer issues. The
+Posting Team check submitted texts and shepherd them onto our servers.
+You can find current contact information for these people on the
+Contact Information page at <http://www.gutenberg.net/contactinfo.html>.
+
+
+
+G.5. How many people are in Project Gutenberg?
+
+As of mid-2002, there are about 100 active producers, and 200 regular,
+active helpers doing tasks like proofing. Something like 1500 people
+receive our Newsletter.
+
+
+
+G.6. How can I contact Project Gutenberg?
+
+There are lots of ways to contact us, depending on what you want to
+talk about. The Contact Info page
+<http://www.gutenberg.net/contactinfo.html> on the main web site lists
+them.
+
+
+
+G.7. How can I help Project Gutenberg?
+
+Donate money! We're an all-volunteer project, and we don't have much
+to spend, so even a little goes a long way. Our Donation page
+<http://www.gutenberg.net/donation.html> tells you how.
+
+Produce a text! Turn an old book into an immortal etext.
+The Volunteers' FAQ [V.1] tells you how.
+
+
+
+G.8. How can I keep in touch with what Project Gutenberg is doing?
+
+Subscribe to one of the Newsletters--weekly or monthly!
+
+The page <http://www.gutenberg.net/subs.html> gives details of how
+to subscribe, unsubscribe and access the archives.
+
+
+
+G.9. What is the relationship between Project Gutenberg, Projekt
+     Gutenberg-DE, Project Gutenberg of Australia, and Project Runeberg?
+
+These are all entirely separate organizations. Projekt Gutenberg-DE
+and Project Gutenberg of Australia use the "Project Gutenberg"
+trademark with permission, and they operate within the copyright rules
+of their respective countries. Project Runeberg has no specific
+connection with Project Gutenberg.
+
+
+
+
+About Project Gutenberg publications:
+
+
+
+G.10. Does Project Gutenberg publish only books?
+
+No.
+
+Project Gutenberg also publishes other cultural works like movies and
+music, but the bulk of our collection is books.
+
+
+
+G.11. What books does Project Gutenberg publish?
+
+Any books that we legally can, and that our volunteers want to work
+on.
+
+We cannot publish any texts still in copyright without permission.
+This generally means that our texts are taken from books published
+pre-1923. (It's more complicated than that, as our Copyright FAQ
+explains, but 1923 is a good first rule-of-thumb for the U.S.A.)
+
+So you won't find the latest bestsellers or modern computer books
+here. You _will_ find the classic books from the start of this century
+and previous centuries, from authors like Shakespeare, Poe, Dante, as
+well as well-loved favorites like the Sherlock Holmes stories by Sir
+Arthur Conan Doyle, the Tarzan and Mars books of Edgar Rice Burroughs,
+Alice's adventures in Wonderland as told by Lewis Carroll, and
+thousands of others.
+
+These books are chosen by our volunteers. Simply, a volunteer decides
+that a certain book should be in the archives, obtains the book and
+does the work necessary to turn it into an e-text. If you're
+interested in volunteering, see the Volunteers' FAQ at [V.1] below.
+
+
+
+G.12. What other things does Project Gutenberg publish?
+
+We have published some music files, in MIDI and MUS formats. We have
+published the Human Genome. We have published pictures of the
+prehistoric cave paintings from the south of France. We have published
+some video files and some audio files, including a Janis Ian track and
+readings from public domain books.
+
+
+
+G.13. How does Project Gutenberg choose books to publish?
+
+Project Gutenberg, as such, does not choose books to publish. There is
+no central list of works that volunteers are asked to work on.
+Individual volunteers choose and produce books according to their own
+tastes and values, and the availability (or price!) of the book.
+
+
+
+G.14. What languages does Project Gutenberg publish in?
+
+Whatever languages we can! As above, this is decided by what languages
+our volunteers choose to work with.
+
+
+
+G.15. Why don't you have any / many books about history, geography,
+      science, biography, etc.?
+      Why aren't there any / more PG books available in French, Spanish,
+      German, etc.?
+
+If we can legally publish a book, and it isn't in the archives, it's
+because no volunteer has produced it yet. At the moment, we have a
+predominance of English language novels because that is what most
+people have chosen to work on.
+
+We're always looking for new languages and topics, and always
+delighted to see people producing them. If we don't have enough of the
+types of books you would like to see, why don't you help us out by
+contributing one? If the people interested in a particular area don't
+contribute, we'll always be short in that area.
+
+
+
+G.16. Why don't you have any books by Steven King, Tom Clancy,
+      Tolkien, etc.?
+
+Project Gutenberg can publish only books that are in the public
+domain [C.10] unless we have the permission of the copyright holder.
+Current bestsellers have not yet entered the public domain, and we're
+not likely to get permission from the authors to publish them.
+
+
+
+G.17. Why is Project Gutenberg so set on using Plain Vanilla ASCII?
+
+Don't misrepresent us--we support and publish many open formats, but,
+yes, we do want to have a plain text version of everything possible.
+
+We're looking at our history, and we're planning for the long
+term--the _very_ long term.
+
+Today, Plain Vanilla ASCII can be read, written, copied and printed
+by just about every simple text editor on every computer in the world.
+This has been so for over thirty years, and is likely to be so for the
+foreseeable future. We've seen formats and extended character sets
+come and go; plain text stays with us. We can still read Shakespeare's
+First Folios, the original Gutenberg Bible, the Domesday Book, and
+even the Dead Sea Scrolls and the Rosetta Stone (though we may have
+trouble with the language!), but we can't read many files made in
+various formats on computer media just 20 years ago.
+
+We're trying to build an archive that will last not only decades,
+but _centuries_.
+
+The point of putting works in the PG archive is that they are copied
+to many, many public sites and individual computers all over the
+world. No single disaster can destroy them; no single government can
+suppress them. Long after we're all dead and gone, when the very
+concept of an ISP is as quaint as gas streetlamps, when HTML reads
+like Middle English, those texts will still be safe, copied, and
+available to our descendants.
+
+The PG archive is so valuable, yet free and easily portable, that even
+if every current PG volunteer vanished overnight, people around the
+world would copy and preserve it.
+
+If the ZIP format loses popularity, and is replaced by better
+compression, it will be easy to convert the zip formats automatically
+(and we post all plain-text files in unzipped format as well). If hard
+drives are replaced by optical memory, it will be easy to copy the
+files onto that. If even ASCII is superseded by Unicode or one of its
+descendants, it will be possible for our grandchildren to convert it
+automatically (and ASCII is included in Unicode anyway).
+
+By contrast, many of us have files saved in proprietary formats from
+word-processors only 5 or 10 years old that are already impractical
+for us to read. Some of our files produced just a few years ago using
+non-ASCII character sets like Codepage 850 are already giving problems
+for some readers. Some eBook reader formats launched within the last
+few years are already obsolete. We have learned from that experience.
+
+We also encourage other open formats based on plain text, like HTML
+and XML, and even occasionally not-so-open ones when simple formatting
+isn't enough, but plain text and ASCII is the only format and
+character set we're sure of in a rapidly-changing technological
+landscape.
+
+Please see also the FAQ [F.1] "What formats does Project Gutenberg
+publish?" for more detailed discussion of formats.
+
+
+
+
+
+Readers' FAQ
+
+About Finding eBooks:
+
+
+
+R.1. How can I find an eBook I'm looking for?
+
+For PG books, the simplest way is to go to the home page at
+<http://www.gutenberg.net>, type the Author or Title into the
+search form, press the "Search" button, and follow the choices.
+
+
+As of late 2002, there is a full-text search available at
+<http://public.ibiblio.org/gsdl/cgi-bin/library.cgi>
+where you can search not only for titles and authors, but any
+words or phrases you want to look up. For example, entering
+"Ample make this bed" and running an "entire books" search for
+all words leads you to Poems Of Emily Dickinson, Series Two.
+
+
+R.2. Can I get a complete list of Project Gutenberg eBooks?
+
+Yes. There are two main options:
+
+GUTINDEX.ALL is the raw list of files posted. You will find it at:
+<ftp://ibiblio.org/pub/docs/books/gutenberg/GUTINDEX.ALL>
+
+PGWHOLE.TXT is the list of files cataloged. A Zipped version is:
+<http://promo.net/gg/pgwhole.zip>
+
+When we post a book, the posting information contains title and
+author, eBook number, base filename and schedule year and month.
+This raw information goes into GUTINDEX.ALL.
+
+After posting, our catalogers get to work and add more information
+--things like full title, subtitle, author birth and death dates,
+Library of Congress Classification, full filenames and sizes. When
+a book has been cataloged, it is entered onto the website database
+so that you can search for it. PGWHOLE.TXT is a summary of the
+books in the website database.
+
+People who want to bypass the search on the website and find books
+themselves will probably want to use GUTINDEX.ALL, since it doesn't
+wait for the cataloging.
+
+
+
+R.3. How can I download a PG text that hasn't been cataloged yet?
+
+In short, just browse to:
+
+<http://www.ibiblio.org/pub/docs/books/gutenberg/>
+
+choose the schedule year of the text (newly-posted texts will usually
+be in the latest year) and look down the list to find the filename
+you're looking for.
+
+In general, you need to know:
+
+a)  the address of an FTP site
+b)  the schedule year of the text you want
+c)  the basename of the text you want.
+
+The fastest and safest FTP site to use for this is ftp.ibiblio.org,
+which is the first of our two primary posting sites (the other being
+ftp.archive.org). We post to these two sites, and then other sites
+copy from them at intervals, so with any FTP sites other than these
+two, the file may not be available immediately.
+
+You can get the schedule year and basename of the text from its line
+in GUTINDEX.ALL. Let's take an example. The file
+
+Mar 2004 The Herd Boy and His Hermit, by C. M. Yonge [#32][hrdbhxxx.xxx]5313
+
+has been posted just a few hours ago as I write this. From the
+GUTINDEX entry, the schedule year is 2004, and the basename of the
+text is hrdbh.
+
+We divide our texts into directories (folders) based on the schedule
+year, so this eBook will be in the directory for 2004, which will be
+named something ending in /etext04. All the directories are named
+etext plus the last two digits of the year. (Somebody's going to have
+to change that convention in about 87 years from now! :-) We currently
+have directories starting at 90, running through the 90s and then 00,
+01, 02, 03, 04. All eBooks produced before 1991 are in the /etext90
+directory, so if you're looking for
+
+Dec 1971 Declaration of Independence                      [whenxxxx.xxx]  1
+or
+Aug 1989 The Bible, Both Testaments, King James Version   [kjv10xxx.xxx] 10
+
+you should look in /etext90.
+
+As it happens, ibiblio supports both HTTP (web) and FTP access to the
+text, so we can just browse to
+
+<http://www.ibiblio.org/pub/docs/books/gutenberg/>
+
+and choose the 2004 directory from there.
+
+If you want to automate this, you could also use the more direct
+address
+
+<ftp://www.ibiblio.org/pub/docs/books/gutenberg/etext04/>
+
+The equivalent address for ftp.archive.org is
+
+<ftp://ftp.archive.org/pub/etext/etext04/>
+
+Either way, we see a long page of files, in alphabetical order. Scroll
+down to the "H"s and look for hrdbh. We see four files with this
+basename:
+
+ hrdbh10.txt
+ hrdbh10.zip
+ hrdbh10h.htm
+ hrdbh10h.zip
+
+This means that both plain text and HTML formats are available,
+and you can choose to download them either zipped or uncompressed.
+For more detail about conventions for filenames, see the FAQ "What
+do the filenames of the texts mean?" [R.35]. The main thing you need
+to know is that any file beginning with hrdbh is some format or
+edition of this book.
+
+Finally, all you have to do is click on the format you want to
+download.
+
+
+
+R.4. You don't have the eBook I'm looking for. Can you help me find it?
+
+Sorry, no. We can suggest (see below) some other places to look for
+publicly accessible books on the Net, but we can't do the search for
+you.
+
+
+
+R.5. Where else can I go to get eBooks?
+
+The On-Line Books Page <http://onlinebooks.library.upenn.edu/> and the
+Internet Public Library at <http://www.ipl.org/> are two sites that
+specialize in creating a list of all books on-line from any source.
+Searching them is a good place to start.
+
+If you're looking for commercial books, like current textbooks or
+bestsellers, you're not likely to find them here, since recent books
+are not in the public domain. For these, you should look for
+commercial booksellers on the Net--any search engine will direct you
+to some if you enter search terms like "shop ebook".
+
+
+
+R.6. I see some eBooks in several places on the Net. Do different
+     people really re-create the same eBooks?
+
+It does happen, but mostly by accident. Anyone experienced in eBook
+creation will first search the usual places to see whether anyone else
+has already transcribed the book they're interested in. If it has been
+transcribed, they will not duplicate the effort.
+
+Etexts that are in the public domain very often float around the Net
+for years--stored in a gopher server here, posted to Usenet there,
+held on someone's local computer for a year or two and then
+reformatted as HTML and uploaded to a web site somewhere else. And
+this is good, because we want texts to be copied as widely as
+possible.
+
+Public domain eBooks are fair game for anyone to copy, correct, mark
+up, package and post: that's what being in the public domain means.
+
+Project Gutenberg eBooks are often quickly copied and reformatted, and
+posted on other sites like Blackmask at <http://www.blackmask.com>.
+
+If you find an eBook in many different places, the odds are good that
+it came from one original source, and was copied around.
+
+It does sometimes happen that people duplicate the transcription of
+books already made into text. Sometimes it's because they didn't find
+the version already made. Sometimes they have a different edition, and
+want to transcribe that. Mostly, though, we all try not to do more
+work than we have to.
+
+
+
+
+About Using the Web Site:
+
+
+
+R.7. Why couldn't I reach your site? (or: Why is your site slow?)
+
+This isn't common, but it happens. Project Gutenberg is a very busy
+site, probably one of the busiest non-commercial sites on the Web, and
+sometimes the amount of traffic causes a slowdown.
+
+There may also be a bottleneck somewhere else between you and the
+site. If at first you don't succeed, _don't tell us_, just try, try
+again. The correct address is either:
+
+http://promo.net/pg/
+              or
+http://www.gutenberg.net/
+
+
+
+R.8. I get an error when I try to download a book.
+
+We do not keep e-text files on this site. Instead, many FTP sites
+throughout the world hold the whole Project Gutenberg archive of
+texts. An FTP site is just a computer on the Internet that specializes
+in holding files for download and sending them to people on request.
+You can find a list of FTP sites that hold Gutenberg texts at
+<http://www.gutenberg.net/list.html>.
+
+When you're searching or browsing for titles and authors, you're on
+this Project Gutenberg site, but when you click on the book to
+download it, you are connected to an FTP site. At the time you click
+on the filename, your browser contacts an FTP site and tries to
+download the file from there. If you get an error, it could be because
+the FTP site is busy, or because there's a network traffic bottleneck
+between you and that FTP site, or because the text you're looking for
+is missing from that FTP site.
+
+Usually, the easiest solution is to choose another FTP site to
+download your text from. Go to the Search page, choose a different FTP
+site, and search again for your text.
+
+Tip: You should always try to choose the FTP site closest to you. Not
+only are you helping to minimize Net traffic by choosing a nearby
+site, but your file will download faster!
+
+If all else fails, note the year and the filename of the book you
+want, choose an FTP site from this list and click on one of them. Then
+browse your way through the listings to the file you want.
+
+For example, if you find "Lady Susan" by Jane Austen, you will see
+that it was published by Gutenberg in 1997, and its filename is
+lsusn10.txt, so browse to one of the FTP sites, choose the directory
+called etext97 and click (or right-click and Save, depending on your
+browser) on the file lsusn10.txt.
+
+
+
+R.9. I searched for a book I know is in Project Gutenberg, but got no
+     results.
+
+First go to the Advanced Search page. Sometimes you may miss in
+searching because of alternative spellings, so try searching
+separately using just one word in Author or Title. Read the Search
+Tips.
+
+If that fails, you can Browse through the site catalog. Let's say
+you're looking for "The Wandering Jew" by Eugene Sue.
+
+Go to the PG Home page:  <http://www.gutenberg.net/>
+
+Once on this page, click on: "Browse" in "Browse by Author or Title"
+
+You are then brought to a new page, asking you to select an "FTP
+site". Further details on how and why to choose an "FTP Site" are
+available on this page.
+
+Select an FTP Site from the Selection List available at the bottom of
+the page, then click on "Select".
+
+You get a new page, Click on "S", initial for "Sue, Eugene"
+
+You should now see a list of all of the Authors whose Last name starts
+with "S". Scroll down till you find the direct links to the Sue,
+Eugene works.
+
+Click on the work you are interested to, then click on the file link
+found on the page you were brought to, Etext Card ID -3987- when
+selecting the work, as immediately above.
+
+On this page, above the teaser, there are two working links:
+
+DOWNLOAD:
+
+Click on the link of your choice in order to get the book.
+
+If you can't find your text either way, the book has not been
+cataloged. The site catalog always lags behind the postings, since we
+need to collect extra information about the book and the author before
+it goes into the full catalog. If you know that the book has been
+posted recently, and maybe hasn't made it into the catalog yet, read
+the FAQ "How can I download a PG text that hasn't been cataloged yet?"
+
+If even this doesn't help, don't despair! We don't have it, but it may
+be elsewhere on the Web. Go to the major search engines and try there.
+You can also try looking in the Book Search section of The On-Line
+Books Page <http://onlinebooks.library.upenn.edu/> or the Internet
+Public Library <http://www.ipl.org>, and if you have no luck with
+that, you might be able to find it listed as being In Progress
+somewhere on their Books In Progress and Requested page at
+<http://onlinebooks.library.upenn.edu/in-progress.html>.
+
+
+
+R.10. Can I copy your website, or your website materials?
+
+No.
+
+Keeping the PG site updated with the latest e-text releases is an
+ongoing job, and our experience is that people, however
+well-intentioned, do not keep copies up to date. We want there to be
+one clear source for people seeking the latest Project Gutenberg
+information, and we think that having a lot of out-of-date copies and
+partial copies scattered around the net would be a bad thing.
+
+We welcome mirrors and copies of our e-texts, in new FTP sites [R.14],
+but the main web site itself is copyrighted and may not be copied.
+
+
+
+R.11. Your site doesn't look right in my browser.
+      I clicked on a button, and nothing happened.
+
+We take a lot of trouble to ensure that our website uses only valid,
+standard HTML, and we're not even slightly tempted to use glitzy
+features that look good in one browser but don't work in another, so
+we can promise you that our site is not the problem.
+
+The site uses Cascading Style Sheets (CSS), a W3C standard since 1996.
+Some older browsers have a buggy implementation of CSS, and this can
+cause some things to appear off-kilter. If your browser is even older,
+or doesn't know about CSS at all (as in the case of Lynx, for
+example) it should have no problem.
+
+If you actually clicked on a button, like the Search button or the
+Post button on the Volunteers' Web Board page, and nothing happened,
+you might be behind a proxy or web filter that doesn't like you making
+POST requests. If you have a web filter switched on, turn it off,
+reload the page and try again.
+
+
+
+R.12. What does that thing about "Select FTP Site" mean?
+
+Our texts are not actually held on the website. The website just holds
+an index; the files themselves are held on many sites throughout the
+world, called FTP sites. When you have found the book you're looking
+for, and you make that final click to get it, you're not actually
+talking to our website any more--you are transferred to the FTP site
+you selected. Some FTP sites are near you; some are far away. Some may
+be faster than others, even if they are about the same distance; some
+may have temporary technical problems.
+
+You should usually select the FTP site nearest you. If you find you're
+having problems with that one, you can select another.
+
+
+
+R.13. What exactly is an FTP site anyway?
+
+FTP stands for File Transfer Protocol, one of the oldest and most
+reliable protocols of the internet. This is the method by which a file
+can be copied from one computer to another.
+
+An FTP site, or FTP server, is a computer that holds files that people
+can upload and download. In the case of PG, the Posting Team upload
+our texts when they're ready to two main FTP servers,
+<ftp://ftp.ibiblio.org> and <ftp://ftp.archive.org>, which serve as
+our master copies.
+
+Other FTP sites around the world automatically download the files from
+these master sites, so they have a full set of PG publications for you
+to download. Because they only check for updates and new files at
+intervals, some FTP sites may be a day or two behind. Some FTP sites
+don't have space available for everything, so they may hold only the
+zipped versions of the files. But most FTP sites will have the
+entire PG collection. These are called FTP "mirrors", since they are a
+copy of the original.
+
+Many FTP sites exist that offer a full PG mirror but are not on our
+FTP sites list. Commonly, these are in schools, where they serve the
+local students, but don't have enough bandwidth to offer downloads to
+worldwide users.
+
+
+
+R.14. Can I become an FTP mirror?
+
+Yes! We're always looking for more FTP mirrors.
+
+If you manage an FTP site with a few GB of space, please check our
+Contact Information page <http://www.gutenberg.net/contactinfo.html>
+and contact the appropriate person, who will make the arrangements for
+you. If space is a problem, you can consider holding only zipped
+copies of the texts. We can move you up or down the FTP site list as
+you want more or less traffic.
+
+
+
+R.15. Can I make a private FTP mirror for my school, library or
+      organization?
+
+Yes.
+
+We like all FTP mirrors to be open to as many people as possible, but
+we know that not all schools have the resources to be a public mirror,
+so we welcome all mirrors.
+
+And anyway, you don't even have to ask, because we don't control
+what happens to our texts once we post them!
+
+
+
+R.16. When I clicked on the file I want, nothing happened.
+
+When you select a file for download, your request goes to the FTP site
+you selected, not to our website. If the FTP site you selected is
+having problems, or if there is the Net version of a traffic jam
+between you and it, you may have problems downloading.
+
+Select a different FTP site [R.12] and try again.
+
+
+
+R.17. How many texts are downloaded through the web site?
+
+We don't really do statistics, but in one particular month for which
+we did, we had a figure of about 800,000 searches completed. Since the
+final request for download goes to the FTP site selected and not to our
+website, we can't confirm that all of these were actually downloaded,
+but we expect that most people who have gone all the way through the
+search will finish the job.
+
+In another month, we had about 1,000,000 downloads of files from
+ftp.ibiblio.org, our main FTP site. This does not count downloads from
+other FTP sites, of course. Why are there more downloads than
+searches? Because people who are already familiar with getting PG
+texts can skip the website search and download straight from the FTP
+sites.
+
+
+
+R.18. What are the most popular books?
+
+We very rarely do statistics, but on one occasion in late 1999 when we
+did, we found the top author searches to be:
+
+  1 shakespeare
+  2 poe
+  3 doyle
+  4 melville
+  5 dante
+  6 joyce
+  7 shaw
+  8 christie
+  9 conrad
+ 10 porter
+ 11 verne
+ 12 hemingway
+ 13 darwin
+ 14 miller
+ 15 woolf
+ 16 zola
+ 17 king
+ 18 eliot
+ 19 churchill
+ 20 smith
+ 21 twain
+
+and the top individual books searched for to the point of downloading
+were:
+
+  1. Lady Susan, by Jane Austen
+  2. 1st PG Collection of Edgar Allan Poe
+  3. The Adventures of Sherlock Holmes, by Arthur Conan Doyle
+  4. Moby Dick, by Herman Melville
+  5. A Christmas Carol, by Dickens
+  6. The King James Bible
+  7. Twelve Stories and a Dream, by H.G. Wells
+  8. Stories by Modern American Authors
+  9. Lock and Key Library, Magic & Real Detectives
+ 10. [Hans Christian] Andersen's Fairy Tales
+ 11. The Legend of Sleepy Hollow, Washington Irving
+
+These numbers vary a lot. When a movie based on a classic is released,
+downloads of that eBook go through the roof!
+
+
+
+
+About Downloading and Using Project Gutenberg eBooks:
+
+
+
+R.19. Should I download a ZIP or a TXT file?
+
+If you know how to unzip a file, then downloading the zip is faster.
+For some non-text eBooks that contain multiple files, like HTML with
+included images, only a zip file may be available. For some other
+formats, like MP3 or MPEG, there may not be a zipped version available
+because the native format of the file is already compressed enough
+that zipping it doesn't save much.
+
+
+
+R.20. I've got a ZIP file. What do I do with it?
+
+Unzip it.
+
+If you want a free program, you could try the open source Info-Zip
+software available at
+<http://www.ctan.org/tex-archive/tools/zip/info-zip/> for Mac, MS-DOS,
+Unix, Windows and just about everything else you might have.
+
+If you want a commercial program, PKZIP from <http://www.pkware.com>
+and WinZip from <http://www.winzip.com> are among many popular
+shareware utilities that allow you to unzip files.
+
+Mac-users using Stuffit Expander may like to set a preference (File /
+Preferences / Cross Platform) to "Convert text files to Macintosh format
+. . . When a file is known to contain text". This gets rid of strange
+characters (linefeeds), which are not wanted on a Mac, at the beginnings
+of lines. MacZip is another free program for Macs. Mac users can also
+try ZipIt or other shareware programs available from the Info-Mac
+archives, e.g. from
+<ftp://mirrors.aol.com/pub/info-mac/_Compress_&_Translate/>.
+
+
+
+
+R.21. I tried to unzip my file, but it said the file was corrupt, or
+      damaged.
+
+The chances are that it didn't download correctly. Try downloading it
+again. If you don't succeed the second time, try downloading the
+unzipped version.
+
+
+
+R.22. I see gibberish onscreen when I click on a book.
+
+To save download time, our etexts are stored in zipped form as well
+as text form. Zipped files are smaller, and take less time to transfer
+to your computer, but you need a program to unzip them. If you try to
+view a zipped file directly, it looks like gibberish.
+
+You can recognize zipped files easily because their filenames end in
+.zip.
+
+If this happens, either make sure you're asking your browser to Save
+the file rather than display it (often, you right-click the file and
+choose Save) or else click on the version of the file that ends in
+.txt instead of .zip. You don't need a zip program to view .txt files.
+
+Looking at a zip rather than a text file is by far the most common
+reason for this problem, but there are some others. If you're quite
+sure that you're not looking at a zip file, then it could be that the
+file you downloaded is in a character set that your viewer doesn't
+recognize, like Big-5 [V.78] for Chinese texts, or Unicode [V.77].
+If this is the case, you will have to find a viewer that works on your
+computer for the specified character set. We may also have an ASCII
+version of the same text available for you--we do try to have ASCII
+versions for everything [G.17], but some languages, like Chinese,
+just cannot be sensibly expressed in ASCII.
+
+If you can see _most_ of the characters, enough to be able to make out
+the text, but there are regular gibberish characters, black squares,
+empty boxes or obviously missing characters scattered about through
+words, then you are probably looking at an "8-bit" text [V.79], with
+accented characters, and your viewer doesn't handle the character set.
+See the FAQ "I can read the text file, but a few characters appear as
+black squares, or gibberish" [R.31].
+
+If there are a very few gibberish characters, black squares or
+obviously missing characters in the text, then it's likely that this
+was intended to be a 7-bit text, but a few 8-bit characters like the
+British pound symbol or accented letters slipped through.
+
+
+
+R.23. Can I download and read your books?
+
+Yes. That's what Project Gutenberg is all about--making texts
+available free to everyone!
+
+
+
+R.24. What am I allowed to do with the books I download?
+
+Most Project Gutenberg e-texts are in the public domain. You can do
+anything you like with these--you can re-post them on your site, print
+them, distribute them, translate them to other languages, convert them
+to other formats, or redistribute them in unchanged form. However, if
+you distribute versions under the Project Gutenberg trademark, we do
+impose some conditions, which are explained in the header and/or
+footer in each text.
+
+Some Project Gutenberg e-texts have copyright restrictions. You can
+still download and read these, but you may not be allowed to
+reproduce, modify or distribute them. When browsing or searching on
+the site, you will see these copyright-restricted texts indicated in
+the listings. For fuller information about them, download the e-text
+and read the header or footer of the file, which will spell out the
+conditions in detail.
+
+
+
+R.25. Does Project Gutenberg know who downloads their books?
+
+No, and we don't want to!
+
+Like any Internet transfer, our sites have to know the IP addresses
+that contact them; without that, no communication is possible. But we
+do not trace, hold or examine them beyond what is necessary to deal
+with any problems or maintain logs or statistics. We never identify IP
+addresses with people.
+
+Further, we encourage people, sites, schools around the world to
+mirror, or copy, our texts to their sites. Once that happens, we have
+no control over them, and we never have any idea who or even how many
+people access them after that.
+
+Even further, we encourage people to distribute the texts on disks,
+CDs, paper, and any other storage format they can find. We encourage
+them to convert the texts to other formats, and share them.
+
+For most people reading this, anonymity is probably not an issue, but
+you may live in a place or time where reading Paine, or Voltaire, or
+the Bible, or the Koran, is considered suspicious or even subversive.
+We don't know who you are, and what we don't know, we can't tell.
+
+Currently (mid-2002), by means of DRM (Digital Rights/Restrictions
+Management) many commercial publishers can make a list of exactly
+who is reading which of their eBooks. We _don't_ know, and we don't
+_want_ to know.
+
+
+
+R.26. I've found some obvious typos in a Project Gutenberg text.
+      How should I report them?
+
+The first thing to remember is that the people who actually make the
+corrections you suggest are very experienced, and are used to seeing
+lots of different types of errata reports. So the exact format of your
+report isn't really very important--just get the report to us in any
+clear form that we can understand.
+
+Beyond that, here are some tips to avoid misunderstandings.
+
+It's always helpful if you report the full title, etext number, year
+and filename of the text you are correcting. We have multiple editions
+and versions of some texts, like Homer's "Odyssey", and unless you
+tell us exactly what text you mean, we may have to spend some time
+searching and guessing.
+
+Especially, _please_ check and report the exact filename of the text.
+It is amazingly common for people to report problems with abcde10.txt,
+when abcde11.txt is already posted, and has these and other errors
+already fixed.
+
+When there are only a few errors, it's usually easiest to cut and
+paste the line or lines where the error is into your e-mail, with your
+comment.
+
+It can also be useful to give the line number of the place where the
+error is, and some people who check texts regularly do this. If this
+seems natural to you, do it; if it doesn't, don't.
+
+An ideal report for a typical errata list might look like:
+
+    Title: The Odyssey, by Homer
+           Translated by Butcher & Lang
+           April, 1999  [Etext #1728]
+    File:  dyssy08.txt
+
+ Line 884:
+   back Telemachus, who bas now resided there for a month.
+     "bas" should be "has"
+
+ Line 1491:
+   Ithaca yet stands. But I wouldask thee, friend, concerning
+      "would" and "ask" are run together here
+
+ Line 1563:
+   in his father's seat and the elders gave place to him
+      This is the end of a paragraph, and needs a period at end.
+
+ Line 15346-7:
+    'Hearken to me now, ye men of Ithaca, to the
+    will say. Through your own cowardice, my friends, have
+       I think there is something missing between "the" and "will"
+
+
+But the following would get the job done as well:
+
+    In Homer's Odyssey, translated by Butcher and Lang, from /etext99,
+    file dyssy08.txt, I found the following errors:
+
+    Telemachus, who bas now resided
+    change "bas" to "has"
+
+    But I wouldask thee,
+    "would ask" run together
+
+    and the elders gave place to him
+    needs period
+
+    ye men of Ithaca, to the
+    will say.
+    line missing between "the" and "will"?
+
+Where there are more than a few changes, it may be easiest all round
+just to submit a corrected version of the file. However, if you do
+this, please do not re-wrap the paragraphs unless it is really
+necessary; we need to check your suggestions before reposting, and if
+the file is very different, it is difficult and time-consuming for us
+to find your real changes among all of the changes in the lines.
+
+
+
+R.27. I've found some obvious typos in a Project Gutenberg text.
+      Who should I report them to?
+
+The Posting Team, who post the books, also make the corrections, and
+ultimately, the corrections need to go to them.
+
+Many producers put their e-mail addresses in their texts, specifically
+so that readers can contact them when errors are found. If you see
+that in your text, you should try to contact the producer first. This
+is especially true if the corrections aren't obvious, as in the case
+of missing words. The producer is likely to have the original book,
+and will probably be able to confirm your corrections without visiting
+a library. If the book needs the corrections, the producer can then
+notify the Posting Team.
+
+If you get no response from the producer, or if there is no e-mail
+address listed, or if the corrections are small and obvious, you can
+send them to any or all of the Posting Team directly.
+
+
+
+R.28. I've reported some typos. What will happen next?
+
+This varies wildly. Sometimes, you may just get a response e-mail in a
+day or three saying thanks, and that we've fixed the typo. This is
+normal when you've just reported one or a few obvious typos.
+
+Where there is some text missing, or the changes you suggest are
+otherwise not obvious, we may have to find someone with an eligible
+copy of the book to confirm the changes, and that might take time.
+Normally, you will get an e-mail explaining that within a week.
+
+Sometimes, even though you've noticed only one or two small typos, one
+of the Posting Team who was looking at it may find many more, and
+decide that the whole text needs to be re-proofed. This may also take
+time.
+
+If the text needs a lot of changes, we may post a new EDITION [R.35]
+of it, with a new filename: e.g. abcde10.txt may become abcde11.txt.
+In this case, you will receive a copy of the e-mail sent to the posted
+list announcing the new file. Our current rule of thumb is that we
+create a new edition when we make twelve significant changes, but we
+judge each on a case-by-case basis, and especially will usually not
+make a new edition if the original was posted recently.
+
+
+
+R.29. I've got the text file, and I can read it, but it seems to be
+      double-spaced or it has control characters like ^J or ^M at
+      the end of every line.
+
+This is most often seen on Mac or Linux. If you want to dig into why
+this effect happens, see the FAQ "Why use a CR/LF at end of line?" [V.85].
+
+Perhaps viewing it in a different editor or viewer will help, but it's
+usually easiest just to globally replace all of the control characters
+(if you see them) with nothing, or to replace all double line-ends
+with single line-ends.
+
+
+
+R.30. When I print out the text file, each line runs over the edge
+      of the page and looks bad.
+
+If you have a file ending in .txt from Project Gutenberg, it is
+usually formatted with about 70 characters per line, and with a
+Carriage Return/Line Feed pair (also known as a "Hard Return" or a
+"Paragraph Mark") at the end of every line.
+
+This is the most widely accepted format for text files, but it's not
+ideal on all computers and all programs. 70 characters per line means
+that if you are using an unusually large or small font to print it,
+lines may wrap around or not reach across the page. The hard return
+means that on some systems, the lines may appear double-spaced.
+
+Unfortunately, we can't advise you how best to format texts on all
+systems, mostly because we don't know every system! Here are a couple
+of tips you might try:
+
+If your font is too big or too small, try setting the font to Courier
+size 10 or Times size 12. It may not be ideal, but it mostly works.
+
+In a word processor, you may be able to remove the Hard Returns, but
+beware! if you remove too many, the whole text will become one
+paragraph. One common formula for removing the HRs goes like this:
+ 1. First, all paragraphs and separate lines should be separated
+    by two HRs, so that you can see one blank line between them.
+    Where they aren't, as in the case of a table of contents or
+    lines of verse, add the extra HRs to make them so.
+ 2. Replace All occurrences of two HRs with some nonsense character
+    or string that doesn't exist in the text, like ~$~.
+ 3. Replace All remaining HRs with a space.
+ 4. Replace your inserted string ~$~ with one HR.
+
+
+
+R.31. I can read the text file, but a few characters appear as black
+      squares, or gibberish.
+
+The text is using some character set that your editor or viewer isn't.
+For example, the text is using ISO-8859-1, and your viewer is using
+Codepage 850--or vice versa. You can see the plain ASCII characters,
+but non-ASCII characters like accented letters display as nonsense.
+
+Look at the top of the file for a clue to the character set encoding:
+if it's there, it may help you to find which editor, or font, or
+viewer you should be using.
+
+
+
+R.32. Can I get a handheld device for reading PG texts? Which device
+      should I get?
+
+To read eBooks on a handheld, you need three things: the eBook
+content itself (which you can get from PG and other sites), a device
+(which I will sometimes call a PDA, even though technically, the
+RocketBook isn't a PDA) and the reader software that runs on the PDA.
+
+In mid-2002, there are three main families of handheld devices people
+use for reading eBooks: Palms, Pocket PCs and RocketBooks (or their
+successor, REB1100s). In general, it is possible to use any of
+these in combination with any common type of personal computer.
+
+Palms are very common, especially when you count not just the Palm
+<http://www.palm.com> itself, but PalmOS-based devices from other
+manufacturers, like:
+
+ the Franklin eBookman <http://www.franklin.com/ebookman/>,
+ the Handspring Visor <http://www.handspring.com>.
+ the Sony Clie <http://www.sony.com> and
+
+Because of the number of makers of PalmOS-based devices, you can buy
+them with lots of combinations of features--color screen, audio,
+different memory sizes. Of course, Palms have other applications
+besides eBook reading. Palms are the smallest and most portable of the
+three classes, and tend to have the best battery life for travelling,
+but they also have the smallest screen. Just about all reader software
+will run on Palms, except the Microsoft Reader, which runs only on
+Pocket PCs, but you don't need the Microsoft Reader for Project
+Gutenberg eBooks.
+
+In Pocket PCs, the Compaq iPaq is by far the most common in mid-2002.
+More expensive and bulkier than a Palm, it does have a bigger screen.
+Like the Palms, it can perform many functions besides reading eBooks.
+Only Pocket PCs can support the Microsoft Reader, but this is not
+necessary for reading Project Gutenberg eBooks. <http://www.compaq.com>
+
+The RocketBook, and its successor the Gemstar REB1100,
+<http://www.gemstartvguide.com> are quite different from the others.
+These were built specifically for reading eBooks, and do not have
+additional functions. They are not, technically, PDAs. Their screens
+are bigger, and excellent for reading, but do not offer color. They
+also don't offer a choice of readers--the dedicated reader is built-in
+to the device. Both of them require the eBooks you load to be
+formatted for their reader, and files made for them usually have the
+extension .rb for RocketBook. The REB1100 does not come with the
+RocketLibrarian, which is the program you run on your PC to turn an
+etext into a RocketBook file, but people are still making .rb files,
+and the RocketLibrarian is still available and popular among an
+enthusiastic group of Rocket users. (The REB1200 is entirely different
+from the REB1100, and, as far as we know, PG etexts cannot easily be
+transferred to it.)
+
+In summary, the Rocket/REB1100 is a dedicated reader, with a good
+screen, but limited to what it does.
+
+Palms are relatively cheap and common, with a wide range of options,
+and the capacity to function as PDAs as well. They can run all
+common readers except the Microsoft one.
+
+The iPaq <http://www.compaq.com> has a good color screen, but is
+bulkier than a Palm, and can run lots of readers, including the
+Microsoft one, but not all Palm readers are available for Pocket PC.
+Like Palms, the iPaq can do other jobs besides displaying eBooks.
+
+Different people make different choices among these for reading their
+eBooks, and they all work well; it's a matter of personal taste.
+
+
+
+R.33. How can I read a PG eBook on my PDA (Palm, iPaq, Rocket . . .)
+
+To read a book on your PDA, you need to get the file into a format
+that your reader software understands. Each PDA reader program will
+work only with a specific format of file. Some will read several
+formats, but, in general, it's a jungle of competing options.
+
+Unless you use a Rocket or REB1100, you will need to install at least
+one reader program, and many veteran readers install two or three to
+deal with different formats. There are many of them available. In a
+recent internal poll of Gutenberg volunteers who use PDAs,
+
+ C Spot Run <http://www.32768.com/bill/palmos/cspotrun/index.html>,
+ Mobipocket <http://www.mobipocket.com>,
+ PalmReader <http://www.peanutpress.com/>
+ Plucker <http://www.plkr.org>
+
+were our favored choices for reader programs.
+
+Further, the process may be different depending on which reader
+software you're using. Each format that a reader understands has one
+or more converter programs that run on your PC, and turn the plain
+text file into that format. So in general, you have to:
+
+ 1. Download the PG text
+ 2. Edit the text for the layout the converter wants (often HTML).
+ 3. Use the converter to create a file of the format the reader wants.
+ 4. Transfer the converted file to your PDA.
+
+If all this sounds too complicated, remember that many people take and
+convert PG texts into many formats, and offer them for download from
+their sites. Of course, there is no guarantee that someone will have
+converted the particular eBook you want, but there are lots of
+options. Try Blackmask <http://www.blackmask.com>, which lists
+thousands of texts already converted for Mobipocket, iSilo, RocketBook
+and the Microsoft Reader.
+
+There are many other sites that serve pre-converted PG texts.
+
+MemoWare <http://www.memoware.com> is also a useful resource for
+converted eBooks, and has lots of information, including an excellent
+map of the readers and formats jungle at
+<http://www.memoware.com/mw.cgi/?screen=help_format>
+
+Tecriture <http://www.tecriture.net> hosts a service that downloads
+and converts PG texts on the fly, and delivers them straight to you.
+
+If you're "rolling your own", you'll probably need to convert our
+plain texts to HTML at some point, because a lot of converters require
+HTML as input, and this is a common theme in readers' explanations of
+how they get texts onto their PDAs. Don't panic! You don't have to be
+a HTML wizard to do this--in fact, you don't need to know anything
+about HTML at all! Usually, it's just a matter of removing some line
+ends and Saving As HTML. You won't get a lot of fancy markup, or
+images out of thin air, but you will get the book.
+
+One of the main things you usually have to do in making HTML is unwrap
+the lines. If you're making your HTML manually, this is usually done
+by replacing two paragraph marks with some nonsense marker like @@Z@@,
+replacing all single paragraph marks with a space, and replacing the
+nonsense marker with a paragraph mark. After unwrapping, the text can
+just be Saved As HTML.
+
+There are some applications that specifically assist with
+auto-converting text into HTML:
+
+GutenMark <http://www.sandroid.com/GutenMark> was specifically written
+for the purpose, and knows enough about PG conventions to do a very
+good job.
+
+InterParse <http://www.interparse.com> is a Windows-based generic text
+parser that is very easy and intuitive to use.
+
+The World Wide Web Consortium lists some other options at
+<http://www.w3.org/Tools/Misc_filters.html>
+
+If you're using a RocketBook or REB1100, you don't have either the
+choices or the confusion to deal with. One of our volunteers who uses
+a RocketBook offered this recipe for getting a PG text onto a
+RocketBook:
+
+On converting to Rocket:
+
+ 1.    Download text file.
+ 2.    Using your utility for showing formatting, enter your word
+       processing program's edit mode.
+ 3.    Replace all double paragraph marks with some nonsense sequence
+       that can't possibly actually be there, such as @@Z@@.
+ 4.    Replace all single paragraph marks with one single space
+       (enter).
+ 5.    Replace your nonsense sequence with one paragraph mark.
+ 6.    Convert all your double spaces to single spaces. Repeat this
+       until you get "0" for how many replacements were made.
+ 7.    Save in HTML.
+ 8.    Go into your Rocket Librarian. Use "import file using Rocket
+       Librarian." Go and pick up the file, which will be automatically
+       converted to .rb in this process.
+
+This sounds long, but it usually takes me under three minutes except
+for a very long text. I've never taken longer than five minutes. You
+can just go in and pick up the text file with Rocket Librarian, but
+what you get onscreen doing this looks very odd. Steps 2-7 are not
+essential, and if I'm in a hurry to read something once I might skip
+them, but if it's something I know I want to keep I use them.
+
+This formula is not ideal for poetry or blank verse--if you want to
+keep the lines unwrapped, you should avoid removing the paragraph
+marks.
+
+Another volunteer, who reads on Mobipocket <http://www.mobipocket.com>
+offered this suggestion:
+
+I use the MobiPocket Publisher, available free from
+www.mobipocket.com. It wants to take a HTML file as input, so the
+first thing I have to do is convert my PG text to HTML.
+
+I usually do this by running GutenMark, available at
+<http://www.sandroid.org/GutenMark>. I can also do it in Microsoft
+Word using the following sequence:
+
+Edit / Replace / Special and choose Paragraph Mark twice (or, from
+replace, you can type in ^p^p to get two Paragraph Marks) and replace
+with @@@@. Replace All. This saves off real paragraph ends by marking
+them with a nonsense sequence.
+
+Now Replace _one_ Paragraph Mark (^p) with a space. Replace All. This
+removes the line-ends.
+
+Finally, replace @@@@ with _one_ Paragraph Mark. Replace All. This
+brings back the Paragraph Ends.
+
+Now I can Save As HTML.
+
+GutenMark does a better job of converting to HTML than my simple Word
+formula, since it recognizes standard PG features, and sometimes
+Mobipocket doesn't like the HTML produced from Word--it complains of a
+missing file, or doesn't recognize quotation marks.
+
+Having got my HTML file, I open Mobipocket Publisher, choose "Project
+Gutenberg", Add the File I created, and just Publish it to MobiPocket
+.PRC format. Then I pick it up on my iPaq the next time I sync. The
+whole process takes two or three minutes, and the results, since I
+discovered GutenMark, are good.
+
+I recently came across InterParse 4 at <http://www.interparse.com>. It
+doesn't have the built-in knowledge of GutenMark, so the results aren't
+as good, but it's really easy to use, and you can see the effect of your
+changes onscreen as you do it. For most PG books, all you have to do is
+just Open the text file and choose Options / Remove all CRLFs (Except at
+Paragraph End), then Convert / Text to HTML and Save As the HTML
+filename you want. Quick and painless.
+
+
+
+
+
+
+About the Files:
+
+
+
+R.34. What types of files are there, and how do I read them?
+
+The vast majority of our files are plain text. You can read these with
+any editor or text viewer or browser. Some are HTML. You can read
+these with any browser.
+
+For a full listing of other file types as of mid-2002, and how to read
+them, please see the Formats FAQ [F.2].
+
+
+
+R.35. What do the filenames of the texts mean?
+
+PG files are named for the text, the edition, and the format type.
+
+As of February, 2002, all PG files are named in "8.3" format--that is,
+up to eight characters, a dot, and three more characters.
+
+The first five characters in the filename are simply a unique name for
+that text, for example, "Ulysses" by Joyce begins with "ulyss".
+
+If the text has been posted as both a 7-bit and 8-bit text, then the
+first character of the filename will be a 7 or an 8, to indicate that.
+For example, we have both 7crmp10 and 8crmp10 for Dostoevsky's
+Crime and Punishment.
+
+The 6th and 7th characters of the name are the edition number--01
+through 99. We normally start at edition 10 (1.0); numbers lower than
+that indicate that we think the text needs some more work; numbers
+higher than that mean that someone has corrected the original edition
+10.
+
+The 8th character of the filename, if it exists, indicates either the
+version or the format of the file. When we get a different version of
+the text based on a different source, we give it an a, b, c, as for
+example if the text is from a different translation. Where we have
+posted a text in a different format, we also add an eighth
+character--"h" for HTML, "x" for XML, "r" for RTF, "t" for TeX, "u"
+for Unicode are established formats. There have been some experimental

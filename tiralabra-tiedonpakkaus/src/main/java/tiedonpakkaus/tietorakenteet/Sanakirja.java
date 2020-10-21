@@ -1,109 +1,77 @@
 package tiedonpakkaus.tietorakenteet;
 
-/**
- * LZW-koodauksessa käytettävä sanakirja.
- *
- * @author Antti
- */
 public class Sanakirja {
 
-    Tavujono[] koodit;
-    int[] etuliitteet;
-    byte[] merkit;
-    int koodiNro;
-    int maxKoko;
-    int kap;
+    Koodijono[] taulukko;
+    int uusiIndeksi;
+    byte[] purettuJono;
 
-    public Sanakirja(int koodinPituus) {
+    public Sanakirja(int maksimiPituus) {
 
-        kap = (int) Math.pow(2, koodinPituus + 1);
-        maxKoko = (int) Math.pow(2, koodinPituus) - 1;
-//        etuliitteet = new int[kap];
-//        merkit = new byte[kap];
-        koodit = new Tavujono[kap];
-
-    }
-
-    public int getKap() {
-        return kap;
-    }
-
-    public int getKoodi(Tavujono uusi) {
-        Tavujono tallennettu = koodit[uusi.getHajautusarvo()];
-        return tallennettu.getKoodi();
-    }
-
-    public void alustaSanakirja() {
-
-        koodit = new Tavujono[kap];
-        koodiNro = 0;
+        taulukko = new Koodijono[1 << maksimiPituus];
 
         for (int i = 0; i < 256; i++) {
-
-            byte tavu = (byte) i;
-            Tavujono jono = new Tavujono(tavu, kap);
-            lisaaTavujono(jono);
+            taulukko[i] = new Koodijono((byte) 0, -1);
+            taulukko[i].k = (byte) i;
         }
-
+        
+        uusiIndeksi = 258;
     }
 
-    public void lisaaTavujono(Tavujono jono) {
-        jono.setKoodi(koodiNro);
+    public boolean etsiKoodiJono(Koodijono j) {
 
-        Tavujono linkki = koodit[jono.getHajautusarvo()];
+        int indeksi = lisaa(j);
+        if (indeksi != -1) {
+            j.etuliiteIndeksi = indeksi;
+            return true;
+        }
+        return false;
+    }
 
-        if (linkki != null) {
+    public int lisaa(Koodijono m) {
+        
+        Koodijono c = new Koodijono(m.getTavu(), m.getEtuliiteIndeksi());
 
-            while (linkki.getSeuraava() != null) {
-
-                linkki = linkki.getSeuraava();
-            }
-
-            linkki.setSeuraava(jono);
-
+        if (c.etuliiteIndeksi == -1) {
+            int indeksi = (int) c.getTavu() & 0xFF;
+            return indeksi;
+        }
+        
+        int indeksi = taulukko[c.etuliiteIndeksi].ensimmainen;
+        if(indeksi == -1) {
+            taulukko[c.etuliiteIndeksi].ensimmainen = uusiIndeksi;
         } else {
-            koodit[jono.getHajautusarvo()] = jono;
-        }
-
-        koodiNro++;
-    }
-
-    /**
-     * Tarkistaa, sisältääkö sanakirja annetun Tavujono-olion. Katsotaan
-     * löytyykö hajautusarvon osoittamasta indeksistä jo annettu Tavujono-olio.
-     * Jos löytyy, palautetaan sen koodi. Jos ei, tallennetaan se sanakirjaan
-     * seuraavalla vapaalla koodilla ja palautetaan se.
-     *
-     * @param jono Etsittävä tavujono
-     * @return tavujonoa vastaava koodi
-     */
-    public int sisaltaaTavujonon(Tavujono jono, byte merkki) {
-
-        Tavujono yhdiste = new Tavujono(jono, merkki, kap);
-
-        if (koodit[yhdiste.getHajautusarvo()] != null) {
-
-            Tavujono vertailu = koodit[yhdiste.getHajautusarvo()];
-
-            if (yhdiste.onSama(vertailu)) {
-                return vertailu.getKoodi();
-            }
-
-            while (vertailu.getSeuraava() != null) {
-
-                vertailu = vertailu.getSeuraava();
-
-                if (yhdiste.onSama(vertailu)) {
-                    return vertailu.getKoodi();
+            while (true) {
+                
+                if (m.getTavu() == taulukko[indeksi].getTavu()) {
+                    return indeksi;
+                }
+                if(m.getTavu() < taulukko[indeksi].getTavu()) {
+                    int seuraava = taulukko[indeksi].vasen;
+                    if (seuraava == -1) {
+                        taulukko[indeksi].vasen = uusiIndeksi;
+                        break;
+                    }
+                    indeksi = seuraava;
+                } else {
+                    
+                    int seuraava = taulukko[indeksi].oikea;
+                    if (seuraava == -1) {
+                        taulukko[indeksi].oikea = uusiIndeksi;
+                        break;
+                    }
+                    indeksi = seuraava;
                 }
             }
-
-            return -1;
-
         }
-
+        taulukko[uusiIndeksi] = c;
+        uusiIndeksi++;
+        
         return -1;
 
     }
-
+    
+    public int koko() {
+        return uusiIndeksi;
+    }
 }

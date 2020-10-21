@@ -4,7 +4,7 @@ import java.util.*;
 import tiedonpakkaus.domain.TPPalvelu;
 
 /**
- * Tilap√§inen tekstik√§ytt√∂liittym√§.
+ * Tilap‰inen testik‰yttˆliittym‰.
  */
 public class TekstiUI {
 
@@ -18,7 +18,7 @@ public class TekstiUI {
         System.out.println("(1) Pakkaa tiedosto (Huffman)");
         System.out.println("(2) Pura tiedosto (Huffman)");
         System.out.println("(3) Pakkaa tiedosto (LZW)");
-        //System.out.println("(4) Pura tiedosto (LZW)");
+        System.out.println("(4) Pura tiedosto (LZW)");
         String syote = lukija.nextLine();
 
         if (syote.equals("1")) {
@@ -38,13 +38,14 @@ public class TekstiUI {
             System.out.println("Anna pakattavan tiedoston nimi: ");
             String tiedostoL = lukija.nextLine();
             String[] osat = tiedostoL.split("\\.");
-            String tiedostoT = osat[0] + "_zlw.dat";
+            String tiedostoT = osat[0] + ".lzw";
             palvelu.suoritaLZW(tiedostoL, tiedostoT);
 
         } else if (syote.equals("4")) {
 
             System.out.println("Anna purettavan tiedoston nimi: ");
             String tiedostoP = lukija.nextLine();
+            palvelu.puraLZW(tiedostoP);
             
 
         } else {
