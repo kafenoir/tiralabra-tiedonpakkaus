@@ -67,7 +67,7 @@ public class Solmu implements Comparable<Solmu> {
         return this.koodi;
     }
     
-    public boolean isPseudoEOF() {
+    public boolean onPseudoEOF() {
         return pseudoEOF;
     }
 

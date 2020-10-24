@@ -1,8 +1,9 @@
 package tiedonpakkaus.domain;
 
+import tiedonpakkaus.koodaus.Huffman;
 import java.util.*;
-import tiedonpakkaus.file.Tallennus;
-import tiedonpakkaus.file.TiedostonLuku;
+import tiedonpakkaus.io.Tallennus;
+import tiedonpakkaus.io.Luku;
 
 /**
  * Sovelluslogiikasta vastaava luokka.
@@ -10,13 +11,13 @@ import tiedonpakkaus.file.TiedostonLuku;
 public class TPPalvelu {
 
     Huffman huffman;
-    TiedostonLuku tiedostonLuku;
+    Luku tiedostonLuku;
     Tallennus tallennus;
 
     public TPPalvelu() {
 
         huffman = new Huffman();
-        tiedostonLuku = new TiedostonLuku();
+        tiedostonLuku = new Luku();
         tallennus = new Tallennus();
 
     }
@@ -29,11 +30,11 @@ public class TPPalvelu {
      * @param nimiL luettavan tiedoston nimi
      * @param nimiT pakatun tiedoston nimi
      */
-    public void suoritaHuffmanTiedostolle(String nimiL, String nimiT) {
+    public void pakkaaHuffman(String nimiL, String nimiT) {
 
         byte[] tavut = tiedostonLuku.lueTiedosto(nimiL);
-        byte[] huffmanKoodi = huffman.suoritaHuffman(tavut);
-        HashMap<Byte, Integer> frekvenssit = huffman.getFrekvenssitaulu();
+        byte[] huffmanKoodi = huffman.pakkaa(tavut);
+        int[] frekvenssit = huffman.getFrekvenssitaulu();
         tallennus.kirjoitaHuffman(huffmanKoodi, frekvenssit, nimiT);
     }
 
@@ -44,29 +45,24 @@ public class TPPalvelu {
      *
      * @param nimi purettavan tiedoston nimi
      */
-    public void puraTiedosto(String nimi) {
+    public void puraHuffman(String nimi, String purkunimi) {
 
-        tiedostonLuku.luePakattuTiedosto(nimi);
-        HashMap<Byte, Integer> frekvenssit = tiedostonLuku.getFrekvenssit();
+        tiedostonLuku.luePakattuHuffman(nimi);
+        int[] frekvenssit = tiedostonLuku.getFrekvenssit();
         String koodi = tiedostonLuku.getKoodi();
-        byte[] tavut = huffman.huffmanPura(koodi, frekvenssit);
-        String[] osat = nimi.split("_");
-        nimi = osat[0] + "_purettu.txt";
-        tallennus.kirjoitaPurettu(tavut, nimi);
+        byte[] tavut = huffman.pura(koodi, frekvenssit);
+        tallennus.kirjoitaPurettu(tavut, purkunimi);
     }
-    
-    public void suoritaLZW(String nimiL, String nimiT) {
-        
-        
-        tallennus.kirjoitaLZW(nimiL, nimiT, 9, 21);
+
+    public void pakkaaLZW(String nimiL, String nimiT, int aloitus, int max) {
+
+        tallennus.kirjoitaLZW(nimiL, nimiT, aloitus, max);
 
     }
-    
-    public void puraLZW(String nimi) {
-        
-        byte[] tavut = tiedostonLuku.luePakattuLZW(nimi, 9, 21);
-        String[] osat = nimi.split("\\.");
-        nimi = osat[0] + "_p.txt";
-        tallennus.kirjoitaPurettu(tavut, nimi);
+
+    public void puraLZW(String nimi, String purkunimi, int aloitus, int max) {
+
+        byte[] tavut = tiedostonLuku.luePakattuLZW(nimi, aloitus, max);
+        tallennus.kirjoitaPurettu(tavut, purkunimi);
     }
 }

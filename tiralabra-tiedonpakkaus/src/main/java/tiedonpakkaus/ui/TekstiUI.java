@@ -8,9 +8,11 @@ import tiedonpakkaus.domain.TPPalvelu;
  */
 public class TekstiUI {
 
-    public static void aloita() {
+    static Scanner lukija;
 
-        Scanner lukija = new Scanner(System.in);
+    private static void aloita() {
+
+        lukija = new Scanner(System.in);
         TPPalvelu palvelu = new TPPalvelu();
 
         System.out.println("Tervetuloa!");
@@ -22,31 +24,30 @@ public class TekstiUI {
         String syote = lukija.nextLine();
 
         if (syote.equals("1")) {
-            System.out.println("Anna pakattavan tiedoston nimi: ");
-            String tiedostoL = lukija.nextLine();
-            String[] osat = tiedostoL.split("\\.");
-            String tiedostoT = osat[0] + "_hm.dat";
-            palvelu.suoritaHuffmanTiedostolle(tiedostoL, tiedostoT);
+
+            String luettavanNimi = syotaNimi();
+            String tallennettavanNimi = getPakkausnimi(luettavanNimi, 1);
+
+            palvelu.pakkaaHuffman(luettavanNimi, tallennettavanNimi);
 
         } else if (syote.equals("2")) {
-            System.out.println("Anna purettavan tiedoston nimi: ");
-            String tiedostoP = lukija.nextLine();
-            palvelu.puraTiedosto(tiedostoP);
+            String luettavanNimi = syotaNimi();
+            String tallennettavanNimi = getPurkunimi(luettavanNimi, 1);
+            palvelu.puraHuffman(luettavanNimi, tallennettavanNimi);
 
         } else if (syote.equals("3")) {
 
-            System.out.println("Anna pakattavan tiedoston nimi: ");
-            String tiedostoL = lukija.nextLine();
-            String[] osat = tiedostoL.split("\\.");
-            String tiedostoT = osat[0] + ".lzw";
-            palvelu.suoritaLZW(tiedostoL, tiedostoT);
+            String luettavanNimi = syotaNimi();
+            String tallennettavanNimi = getPakkausnimi(luettavanNimi, 2);
+            int[] rajat = syotaBittirajat();
+            palvelu.pakkaaLZW(luettavanNimi, tallennettavanNimi, rajat[0], rajat[1]);
 
         } else if (syote.equals("4")) {
 
-            System.out.println("Anna purettavan tiedoston nimi: ");
-            String tiedostoP = lukija.nextLine();
-            palvelu.puraLZW(tiedostoP);
-            
+            String luettavanNimi = syotaNimi();
+            String tallennettavanNimi = getPurkunimi(luettavanNimi, 2);
+            int[] rajat = syotaBittirajat();
+            palvelu.puraLZW(luettavanNimi, tallennettavanNimi, rajat[0], rajat[1]);
 
         } else {
             System.out.println("Syöte ei kelpaa. Ohjelma lopetetaan.");
@@ -60,6 +61,62 @@ public class TekstiUI {
     public static void main(String[] args) {
 
         aloita();
+    }
+
+    private static String syotaNimi() {
+
+        System.out.println("Anna tiedoston nimi: ");
+        String nimi = lukija.nextLine();
+
+        return nimi;
+    }
+
+    private static String getPakkausnimi(String nimi, int m) {
+
+        String pakkausnimi = "";
+        String[] osat = nimi.split("\\.");
+
+        if (m == 1) {
+            pakkausnimi = osat[0] + ".hm";
+        } else {
+            pakkausnimi = osat[0] + ".lzw";
+        }
+
+        return pakkausnimi;
+    }
+
+    private static String getPurkunimi(String nimi, int m) {
+        
+        String purkunimi = "";
+        String[] osat = nimi.split("\\.");
+
+        System.out.println("Anna tiedostopaate");
+        
+        if(m == 1) {
+            purkunimi = osat[0] + "_hmp" + "." + lukija.nextLine();
+        } else {
+            purkunimi = osat[0] + "_lzwp" + "." + lukija.nextLine();
+        }
+
+        return purkunimi;
+    }
+
+    private static int[] syotaBittirajat() {
+
+        while (true) {
+            System.out.println("Syota aloituspituus (min 9): ");
+            int koodinPituus = Integer.parseInt(lukija.nextLine());
+
+            System.out.println("Syota enimmäispituus(max 32): ");
+            int maxKoodinPituus = Integer.parseInt(lukija.nextLine());
+
+            if (koodinPituus >= 9 && maxKoodinPituus <= 32 && koodinPituus <= maxKoodinPituus) {
+
+                return new int[]{koodinPituus, maxKoodinPituus};
+            } else {
+                System.out.println("Aloituspituuden ja enimmäispituuden tulee olla välillä 9-32, enimmäispituus tulee olla vähintään yhtä suuri kuin aloituspituus");
+            }
+        }
     }
 
 }

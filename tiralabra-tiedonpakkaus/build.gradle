@@ -3,6 +3,7 @@ plugins {
     id 'jacoco'
     id 'application'
     id 'checkstyle'
+    id 'java-library'
 }
 
 mainClassName = 'tiedonpakkaus.Main'
@@ -17,7 +18,7 @@ dependencies {
 
 jacoco {
     toolVersion = "0.8.3"
-    }
+}
 
 jacocoTestReport {
     reports {
@@ -34,20 +35,29 @@ jacocoTestReport {
 
 task myJavadocs(type: Javadoc) {
     source = sourceSets.main.allJava
-    }
+}
 
 run {
     standardInput = System.in
-    }
+}
 
 test {
     useJUnit()
     finalizedBy jacocoTestReport
 
-    }
+}
 
 checkstyle {
     toolVersion "7.6.1"
+}
+    
+jar {
+    manifest {
+        attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'tiedonpakkaus.Main'
+        )
     }
+}
 
-check.dependsOn jacocoTestReport
+    check.dependsOn jacocoTestReport
