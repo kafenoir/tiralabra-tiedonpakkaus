@@ -1,4 +1,4 @@
-#Käyttö-ohje
+# Käyttö-ohje
 
 Pakattavien tiedostojen tulee olla ohjelman juurikansiossa. 
 

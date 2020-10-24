@@ -21,3 +21,6 @@ Alphabet.txt 98KT
 Huffman: 59 KT, 60 % alkuperäisestä
 LZW: (9, 19): 3 KT,  3% alkuperäisestä
 
+## Aikavaativuudet
+
+Aikavaativuudet vastaavat algoritmien osalta määrittelydokumentissa esitettyjä.
