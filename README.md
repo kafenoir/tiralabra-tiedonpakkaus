@@ -4,6 +4,8 @@ Toteutan tiralabra-projektissa kaksi pakkausalgoritmia: Huffmanin koodauksen ja 
 
 ## Dokumentaatio
 
+[Käyttöohje](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/kaytto-ohje.md)
+
 [Määrittelydokumentti](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/maarittelydokumentti.md)
 
 [Toteutusdokumentti](https://github.com/kafenoir/tiralabra-tiedonpakkaus/tree/master/dokumentaatio/toteutusdokumentti.md)
