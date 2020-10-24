@@ -26,6 +26,12 @@ public class Sanakirja {
         }
         return false;
     }
+    
+    /**
+     * Lisätään etuliite + tavu-yhdistelmä sanakirjaan, jos sitä ei ole löydy ja palautetaan -1. Jos löytyy, palautetaan yhdistelmän indeksi.
+     * @param m
+     * @return 
+     */
 
     public int lisaa(Koodijono m) {
 

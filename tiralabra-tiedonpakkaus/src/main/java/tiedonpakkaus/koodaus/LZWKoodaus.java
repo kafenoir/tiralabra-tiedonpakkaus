@@ -5,6 +5,10 @@ import java.io.OutputStream;
 import tiedonpakkaus.tietorakenteet.Koodijono;
 import tiedonpakkaus.tietorakenteet.Sanakirja;
 
+/**
+ * LZW-koodauksesta vastaava luokka
+ */
+
 public class LZWKoodaus {
 
     byte[] syote;
@@ -17,6 +21,15 @@ public class LZWKoodaus {
     int bittejaPuskurissa;
     int koodiIndeksi;
     OutputStream ulos;
+    
+    /**
+     * Konstruktori saa bittipituuden(leveyden) alkuarvon, maksimiarvon sekä
+     * tallennustiedoston tulostusvirran
+     *
+     * @param aloituspituus
+     * @param maxPituus
+     * @param ulos
+     */
 
     public LZWKoodaus(int aloituspituus, int maxPituus, OutputStream ulos) {
         this.aloituspituus = aloituspituus;
@@ -28,6 +41,20 @@ public class LZWKoodaus {
         bittejaPuskurissa = 0;
         koodiIndeksi = 0;
     }
+    
+    /**
+     * Algoritmi etsii järjestyksessä pidempiä alijonoja, kunnes se kohtaa
+     * sellaisen, jota ei löydy sanakirjasta. Tässä kohtaa lisätään tulosteeseen
+     * etuliitteen (viimeinen tunnettu alijono) indeksi ja sanakirjaan
+     * etuliitteen indeksin + viimeksi luetun tavun yhdistelmä. Jos nykyisellä
+     * bittipituudella ei ole mahdollista lisätä uutta indeksiä, kasvatetaan
+     * bittipituutta yhdellä. Jos bittipituus on maksimissa ja viimeinen
+     * mahdollinen indeksi on käytetty, resetoidaan sanakirja. Lopuksi
+     * kirjoitetaan koodin päättymisen merkitsevä eof-arvo.
+     *
+     * @param syote
+     * @throws IOException
+     */
 
     public void koodaa(byte[] syote) throws IOException {
 
@@ -78,6 +105,12 @@ public class LZWKoodaus {
         System.out.println("Aikaa kului " + ((loppu - alku) / 1e9) + " s");
 
     }
+    
+     /**
+     * 32-bittinen puskuri, jonka avulla jaetaan ja kirjoitetaan vaihtelevanpituiset indeksiarvot tavuina.
+     * @param indeksi
+     * @throws IOException 
+     */
 
     public void kirjoita(int indeksi) throws IOException {
         bittiPuskuri |= indeksi << (32 - koodinPituus - bittejaPuskurissa);
@@ -90,6 +123,11 @@ public class LZWKoodaus {
             bittejaPuskurissa -= 8;
         }
     }
+    
+    /**
+     * Tyhjennetään puskuroidun tulostevirran puskuri.
+     * @throws IOException 
+     */
 
     public void lopeta() throws IOException {
         ulos.write(0);
@@ -99,6 +137,11 @@ public class LZWKoodaus {
         }
 
     }
+    
+    /**
+     * Kirjoitetaan tiedoston alkuun bittipituuden vaihteluväli
+     * @throws IOException 
+     */
     
     public void kirjoitaPituudet() throws IOException {
         

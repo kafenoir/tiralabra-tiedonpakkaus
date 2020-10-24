@@ -3,6 +3,10 @@ package tiedonpakkaus.koodaus;
 import tiedonpakkaus.tietorakenteet.Solmu;
 import tiedonpakkaus.tietorakenteet.HuffmanKeko;
 
+/**
+ * Huffman-koodauksesta ja dekoodauksesta vastaava luokka
+ */
+
 public class Huffman {
 
     int[] frekvenssit;
@@ -17,6 +21,13 @@ public class Huffman {
 
     }
 
+    /**
+     * Kutsuu Huffman-koodaukseen tarvittavia metodeja ja palauttaa lopuksi
+     * Huffman-koodin tavuina.
+     *
+     * @param tavut tiedostosta luettu syöte
+     * @return Huffman-koodi tavuina
+     */
     public byte[] pakkaa(byte[] tavut) {
 
         long alku = System.nanoTime();
@@ -35,7 +46,12 @@ public class Huffman {
 
     }
 
-    private void laskeFrekvenssitTavuille(byte[] tavut) {
+    /**
+     * Laskee syötteen tavujen frekvenssit frekvenssitaulukkoon.
+     *
+     * @param tavut tiedostosta luettu syöte
+     */
+    public void laskeFrekvenssitTavuille(byte[] tavut) {
 
         for (byte tavu : tavut) {
 
@@ -43,6 +59,12 @@ public class Huffman {
         }
     }
 
+    /**
+     * Lisää minimikekoon tavu-frekvenssiparit solmuina. Lopuksi lisää
+     * Huffman-koodin loppumisen osoittavan pseudoEOF-merkin.
+     *
+     * @return minimikeko
+     */
     public HuffmanKeko rakennaKekoTavuista() {
 
         HuffmanKeko minimikeko = new HuffmanKeko(frekvenssit.length + 1);
@@ -66,6 +88,15 @@ public class Huffman {
         return minimikeko;
     }
 
+    /**
+     * Hakee minimikeosta kaksi pienimmän frekvenssiarvon omaavaa solmua ja
+     * yhdistää ne puuksi, jonka juureksi asetetaan niiden yhteenlaskettu
+     * frekvenssi. Puu lisätään takaisin kekoon ja prosessia jatketaan kunnes
+     * jäljellä on yksi yhtenäinen Huffman-puu.
+     *
+     * @param keko minimikeko
+     * @return Huffman-puun juuri
+     */
     public Solmu rakennaHuffmanPuu(HuffmanKeko keko) {
 
         int n = keko.getKoko();
@@ -84,6 +115,15 @@ public class Huffman {
         return keko.poll();
     }
 
+    /**
+     * Luo kullekin Huffman-puun lehteen tallennetulle tavulle koodin
+     * laskeutumalla polkua juuresta lehteen. Jokainen vasemmalle laskeutuminen
+     * lisää koodiin 0:n ja oikealle laskeutuminen 1:n. Tavujen koodit
+     * tallennetaan kooditaulukkoon.
+     *
+     * @param solmu
+     * @param koodi
+     */
     public void luoKooditaulu(Solmu solmu, String koodi) {
 
         if (solmu.getVasen() == null && solmu.getOikea() == null) {
@@ -97,6 +137,13 @@ public class Huffman {
         }
     }
 
+    /**
+     * Koodaa tiedostosta luetun syötteen tavut edellä luotua kooditaulukkoa
+     * käyttäen.
+     *
+     * @param tavut syöte
+     * @return Huffman-koodi merkkijonona
+     */
     public String koodaaTavut(byte[] tavut) {
 
         StringBuilder rakentaja = new StringBuilder();
@@ -118,6 +165,12 @@ public class Huffman {
 
     }
 
+    /**
+     * Muuntaa merkkijonomuotoisen Huffman-koodin tavumutoon.
+     *
+     * @param koodi koodi merkkijonona
+     * @return
+     */
     public byte[] koodiTavuiksi(String koodi) {
 
         byte[] koodiTavuina = new byte[koodi.length() / 8];
@@ -133,8 +186,17 @@ public class Huffman {
 
     }
 
+    /**
+     * Purkaa tiedostosta luetun Huffman-koodin. Otsakkeesta luettujen
+     * tavufrekvenssien avulla rekonstruoidaan alkuperäisen syötteen
+     * koodaamiseen käytetty Huffman-puu, jonka avulla koodi saadaan purettua.
+     *
+     * @param koodi tiedostosta luettu Huffman-koodi
+     * @param frekvenssit tiedoston otsakkeesta luetut tavujen frekvenssit
+     * @return
+     */
     public byte[] pura(String koodi, int[] frekvenssit) {
-        
+
         this.frekvenssit = frekvenssit;
 
         long alku = System.nanoTime();

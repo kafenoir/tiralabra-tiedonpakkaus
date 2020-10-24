@@ -5,6 +5,11 @@ import java.io.InputStream;
 import tiedonpakkaus.tietorakenteet.Jonosanakirja;
 import tiedonpakkaus.tietorakenteet.Tavujono;
 
+/**
+ * LZW-dekoodaamisesta vastaava luokka
+ *
+ * @author Antti
+ */
 public class LZWDekoodaus {
 
     int aloituspituus;
@@ -28,6 +33,16 @@ public class LZWDekoodaus {
         tuloste = new byte[(1 << 24) - 1];
     }
 
+    /**
+     * Algoritmi käy läpi koodattu syötettä. Haetaan tunnetut tavujonot
+     * sanakirjasta. Jos vastaan tulee ei-tunnettu koodi, täytyy sen olla työn
+     * alla olevan alijonon koodi eli sen ensimmäinen tavu on työn alla olevan
+     * jonon ensimmäinen tavu. Lisätään tulosteeseen tämä tavu ja lisätään työn
+     * alla olevan jono sanakirjaan seuraavalla indeksillä.
+     *
+     * @return
+     * @throws IOException
+     */
     public byte[] dekoodaa() throws IOException {
 
         long alku = System.nanoTime();
@@ -42,7 +57,7 @@ public class LZWDekoodaus {
 
             int vanha = lue();
             Tavujono jono = jonosanakirja.getTavujono(vanha);
-            kirjoitaPuskuriin(jono.getTavut());
+            lisaaTulosteeseen(jono.getTavut());
             byte merkki = (byte) vanha;
             int uusi;
 
@@ -65,7 +80,7 @@ public class LZWDekoodaus {
                     jono = jonosanakirja.getTavujono(uusi);
                 }
 
-                kirjoitaPuskuriin(jono.getTavut());
+                lisaaTulosteeseen(jono.getTavut());
 
                 merkki = jono.getTavut()[0];
                 jonosanakirja.lisaaKoodi(vanha, merkki);
@@ -87,13 +102,13 @@ public class LZWDekoodaus {
 
     }
 
-    private void kirjoitaPuskuriin(byte[] jono) {
+    private void lisaaTulosteeseen(byte[] jono) {
 
         for (int i = 0; i < jono.length; i++) {
             tuloste[tulosteenIndeksi] = jono[i];
             tulosteenIndeksi++;
         }
-        
+
         if (tulosteenIndeksi > tuloste.length - 1) {
             byte[] tulosteUusi = new byte[tuloste.length * 2];
             System.arraycopy(tuloste, 0, tulosteUusi, 0, tuloste.length);
@@ -101,6 +116,12 @@ public class LZWDekoodaus {
         }
 
     }
+    
+    /**
+     * 32-bittinen puskuri vaihtelevanpituisten koodin lukemiseen.
+     * @return
+     * @throws IOException 
+     */
 
     private int lue() throws IOException {
         if (viimeksiLuettu == 256) {
@@ -129,6 +150,11 @@ public class LZWDekoodaus {
         System.arraycopy(tuloste, 0, tulosteT, 0, tulosteenIndeksi);
         tuloste = tulosteT;
     }
+    
+    /**
+     * Luetaan bittipituuksien vaihteluväli tiedoston alusta
+     * @throws IOException 
+     */
 
     private void luePituudet() throws IOException {
 
