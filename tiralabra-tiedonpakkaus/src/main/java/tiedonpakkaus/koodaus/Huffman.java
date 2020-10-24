@@ -37,7 +37,6 @@ public class Huffman {
 
     private void laskeFrekvenssitTavuille(byte[] tavut) {
 
-        //HashMap<Byte, Integer> frekvenssit = new HashMap<>();
         for (byte tavu : tavut) {
 
             frekvenssit[tavu & BITTIMASKI]++;
@@ -143,7 +142,6 @@ public class Huffman {
         byte[] tavut = new byte[koodi.length()];
         HuffmanKeko keko = rakennaKekoTavuista();
         Solmu juuri = rakennaHuffmanPuu(keko);
-        StringBuilder rakentaja = new StringBuilder();
         Solmu solmu = juuri;
         int j = 0;
         int i = 0;

@@ -7,6 +7,7 @@ import tiedonpakkaus.tietorakenteet.Tavujono;
 
 public class LZWDekoodaus {
 
+    int aloituspituus;
     int koodinPituus;
     int maksimiKoodinPituus;
     int koodiIndeksi;
@@ -17,67 +18,73 @@ public class LZWDekoodaus {
     int bittiPuskuri;
     int bittejaPuskurissa;
     int viimeksiLuettu;
-    
+    final int BITTIMASKI = 0xFF;
 
-    public LZWDekoodaus(int koodinPituus, int maksimiKoodinPituus, InputStream sisaan) {
-        this.koodinPituus = koodinPituus;
-        this.maksimiKoodinPituus = maksimiKoodinPituus;
+    public LZWDekoodaus(InputStream sisaan) {
         this.sisaan = sisaan;
-        jonosanakirja = new Jonosanakirja(maksimiKoodinPituus);
         koodiIndeksi = 0;
         tulosteenIndeksi = 0;
         viimeksiLuettu = 0;
-        tuloste = new byte[(1 << 25) - 1];
+        tuloste = new byte[(1 << 24) - 1];
     }
-    
+
     public byte[] dekoodaa() throws IOException {
-        
+
         long alku = System.nanoTime();
-
-        jonosanakirja.alustaSanakirja();
-        int vanha = lue();
-
-        Tavujono jono = jonosanakirja.getTavujono(vanha);
-        kirjoitaPuskuriin(jono.getTavut());
-
-        byte merkki = (byte) vanha;
-        int uusi;
-        int seuraavaRaja = (1 << koodinPituus) - 2;
+        luePituudet();
+        jonosanakirja = new Jonosanakirja(maksimiKoodinPituus);
 
         while (true) {
 
-            uusi = lue();
+            jonosanakirja.alustaSanakirja();
+            koodinPituus = aloituspituus;
+            int seuraavaRaja = (1 << koodinPituus) - 2;
 
-            if (uusi == 256) {
-                break;
-            }
-
-            if (!jonosanakirja.sisaltaaKoodin(uusi)) {
-
-                jono = jonosanakirja.getTavujono(vanha);
-                jono = new Tavujono(jono, merkki);
-            } else {
-                jono = jonosanakirja.getTavujono(uusi);
-            }
-
+            int vanha = lue();
+            Tavujono jono = jonosanakirja.getTavujono(vanha);
             kirjoitaPuskuriin(jono.getTavut());
+            byte merkki = (byte) vanha;
+            int uusi;
 
-            merkki = jono.getTavut()[0];
-            jonosanakirja.lisaaKoodi(vanha, merkki);
+            while (true) {
 
-            if (jonosanakirja.koko() == seuraavaRaja) {
-                koodinPituus++;
-                seuraavaRaja = (1 << koodinPituus) - 2;
+                uusi = lue();
+
+                if (uusi == 256) {
+                    long loppu = System.nanoTime();
+                    System.out.println("Aikaa kului " + ((loppu - alku) / 1e9) + " s");
+                    trimmaaTuloste();
+                    return tuloste;
+                }
+
+                if (!jonosanakirja.sisaltaaKoodin(uusi)) {
+
+                    jono = jonosanakirja.getTavujono(vanha);
+                    jono = new Tavujono(jono, merkki);
+                } else {
+                    jono = jonosanakirja.getTavujono(uusi);
+                }
+
+                kirjoitaPuskuriin(jono.getTavut());
+
+                merkki = jono.getTavut()[0];
+                jonosanakirja.lisaaKoodi(vanha, merkki);
+
+                if (jonosanakirja.koko() == seuraavaRaja) {
+
+                    if (koodinPituus == maksimiKoodinPituus) {
+                        break;
+                    } else {
+                        koodinPituus++;
+                    }
+                    seuraavaRaja = (1 << koodinPituus) - 2;
+
+                }
+
+                vanha = uusi;
             }
-
-            vanha = uusi;
         }
-        long loppu = System.nanoTime();
-        System.out.println("Aikaa kului "+((loppu-alku)/1e9)+" s");
-        
-        trimmaaTuloste();
 
-        return tuloste;
     }
 
     private void kirjoitaPuskuriin(byte[] jono) {
@@ -85,6 +92,12 @@ public class LZWDekoodaus {
         for (int i = 0; i < jono.length; i++) {
             tuloste[tulosteenIndeksi] = jono[i];
             tulosteenIndeksi++;
+        }
+        
+        if (tulosteenIndeksi > tuloste.length - 1) {
+            byte[] tulosteUusi = new byte[tuloste.length * 2];
+            System.arraycopy(tuloste, 0, tulosteUusi, 0, tuloste.length);
+            tuloste = tulosteUusi;
         }
 
     }
@@ -102,19 +115,25 @@ public class LZWDekoodaus {
         }
 
         int palautus = bittiPuskuri >>> (32 - koodinPituus);
-        
+
         bittiPuskuri = bittiPuskuri << koodinPituus;
         bittejaPuskurissa -= koodinPituus;
 
         viimeksiLuettu = palautus;
         return palautus;
     }
-    
+
     private void trimmaaTuloste() {
-        
+
         byte[] tulosteT = new byte[tulosteenIndeksi];
         System.arraycopy(tuloste, 0, tulosteT, 0, tulosteenIndeksi);
         tuloste = tulosteT;
+    }
+
+    private void luePituudet() throws IOException {
+
+        aloituspituus = sisaan.read() & BITTIMASKI;
+        maksimiKoodinPituus = sisaan.read() & BITTIMASKI;
     }
 
 }

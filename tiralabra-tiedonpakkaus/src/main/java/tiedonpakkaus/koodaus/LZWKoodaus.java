@@ -9,7 +9,8 @@ public class LZWKoodaus {
 
     byte[] syote;
     byte[] koodattu;
-    int maxKoodinPituus;
+    int maksimiKoodinPituus;
+    int aloituspituus;
     int koodinPituus;
     int bittiIndeksi;
     int bittiPuskuri;
@@ -17,9 +18,10 @@ public class LZWKoodaus {
     int koodiIndeksi;
     OutputStream ulos;
 
-    public LZWKoodaus(int aloitusPituus, int maxKoodinPituus, OutputStream ulos) {
-        this.maxKoodinPituus = maxKoodinPituus;
-        this.koodinPituus = aloitusPituus;
+    public LZWKoodaus(int aloituspituus, int maxPituus, OutputStream ulos) {
+        this.aloituspituus = aloituspituus;
+        koodinPituus = aloituspituus;
+        maksimiKoodinPituus = maxPituus;
         this.ulos = ulos;
         bittiIndeksi = 0;
         bittiPuskuri = 0;
@@ -28,16 +30,18 @@ public class LZWKoodaus {
     }
 
     public void koodaa(byte[] syote) throws IOException {
-        
+
         long alku = System.nanoTime();
+        
+        kirjoitaPituudet();
 
         this.syote = syote;
         int koko = syote.length;
         koodattu = new byte[koko + koko / 8];
         int eof = 256;
-        int tyhjenna = 257;
 
-        Sanakirja sanakirja = new Sanakirja(maxKoodinPituus);
+        Sanakirja sanakirja = new Sanakirja();
+        sanakirja.alustaSanakirja(maksimiKoodinPituus);
         Koodijono nykyinen = new Koodijono((byte) 0, -1);
 
         int seuraavaRaja = (1 << koodinPituus) - 1;
@@ -50,10 +54,17 @@ public class LZWKoodaus {
                 nykyinen.setEtuliiteIndeksi(nykyinen.getTavu());
 
                 if (sanakirja.koko() == seuraavaRaja) {
-                    koodinPituus++;
+
+                    if (koodinPituus == maksimiKoodinPituus) {
+
+                        koodinPituus = aloituspituus;
+                        sanakirja.alustaSanakirja(maksimiKoodinPituus);
+
+                    } else {
+                        koodinPituus++;
+                    }
                     seuraavaRaja = (1 << koodinPituus) - 1;
                 }
-
             }
         }
 
@@ -64,7 +75,7 @@ public class LZWKoodaus {
 
         kirjoita(eof);
         long loppu = System.nanoTime();
-        System.out.println("Aikaa kului "+((loppu-alku)/1e9)+" s");
+        System.out.println("Aikaa kului " + ((loppu - alku) / 1e9) + " s");
 
     }
 
@@ -79,13 +90,21 @@ public class LZWKoodaus {
             bittejaPuskurissa -= 8;
         }
     }
-    
+
     public void lopeta() throws IOException {
         ulos.write(0);
-        
+
         if (ulos != null) {
             ulos.flush();
         }
+
+    }
+    
+    public void kirjoitaPituudet() throws IOException {
+        
+       
+        ulos.write(aloituspituus);
+        ulos.write(maksimiKoodinPituus);
         
     }
 
